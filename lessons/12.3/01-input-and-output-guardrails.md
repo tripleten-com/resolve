@@ -87,7 +87,7 @@ The scrub patterns are the real ones from `SECRET_PATTERNS`:
 </tr>
 </table>
 
-A seventh pattern, `aws_key`, matches a well-known cloud access-key shape and is there for pasted CI configs. The `card` row is the one with a twist: the **Luhn check** is the checksum every real card number satisfies, so `_luhn()` lets a 16-digit order number through and redacts a real card number. Run the scrub on its own first:
+A seventh pattern matches the `AKIA` shape of a well-known cloud provider's access-key id and is there for pasted CI configs. The `card` row is the one with a twist: the **Luhn check** is the checksum every real card number satisfies, so `_luhn()` lets a 16-digit order number through and redacts a real card number. Run the scrub on its own first:
 
 ```python
 from resolve.guards.input import scrub_secrets

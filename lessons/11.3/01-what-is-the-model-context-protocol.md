@@ -141,7 +141,7 @@ def as_openai_tools(listed):
             for t in listed.tools]
 ```
 
-Three keys copied and one renamed, and the model has no idea a protocol was involved. Your client forwards these schemas, the model emits a tool call, and your client turns that call into `tools/call` on whichever server owns the name. From **LangChain & LangGraph** onward you do not write this adapter yourself; a library does the same translation into LangChain tools, and the third lesson of this chapter shows it.
+Three keys copied and one renamed, and the model has no idea a protocol was involved. Your client forwards these schemas, the model emits a tool call, and your client turns that call into `tools/call` on whichever server owns the name. From **LangChain & LangGraph** onward you do not write this adapter yourself; a library does the same translation into LangChain tools, and **Connecting MCP Tools to a LangGraph Agent** shows it.
 
 *Diagram idea: the agent loop from **Agent Fundamentals** drawn as a ring of four nodes, observe, think, act, observe. The arrow leaving "act" crosses out of the ring into a box labelled "MCP client", which fans out to the helpdesk server. Caption: "MCP slots into the tool-call step you already built."*
 

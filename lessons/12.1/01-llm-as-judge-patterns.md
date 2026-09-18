@@ -151,13 +151,13 @@ for tid, state in states.items():
 
 ```plain text
 T-10001 [5, 5, 5, 5]
-T-10038 [3, 3, 5, 3]
-T-10004 [5, 5, 5, 5]
+T-10038 [3, 3, 5, 5]
+T-10004 [5, 3, 5, 5]
 ```
 
-`ask` is the simplest call in `resolve.llm`: one prompt in, the reply text out, at temperature 0 by default. Temperature 0 matters more for a judge than for a drafter. An instrument that returns a 4 and then a 3 for the same draft has no reading to give you.
+`ask` is the simplest call in `resolve.llm`: one prompt in, the reply text out, at temperature 0 by default. Temperature 0 matters more for a judge than for a drafter. An instrument that returns a 4 and then a 3 for the same draft has no reading to give you, and temperature 0 narrows that spread without removing it, as the next paragraph shows.
 
-Now read the verdicts against the drafts. T-10001 scores 5 across the board, and the reasoning says why: every menu path and permission claim traces to a chunk of kb-0015. T-10038 gets a 3 on correctness, groundedness, and action safety. The judge's reasoning quotes the sentence that did it: the draft says "there were 12 days remaining in the cycle" and "your charge has been confirmed in our system", and no chunk says either. That is the same sentence the in-graph reviewer flagged when it sent the draft back, so the offline judge and the online reviewer agree about this ticket. T-10004 scores 5 on groundedness even though the reasoning itself notes that "sign out and back in" is not in the chunks. The rubric's 3 anchor says "one minor claim is unsupported", so a strict reading gives a 3 or a 4. The judge was lenient. Keep that example; calibration, below, is how you find out whether it is lenient in general.
+Now read the verdicts against the drafts. T-10001 scores 5 across the board, and the reasoning says why: every menu path and permission claim traces to a chunk of kb-0015. T-10038 gets a 3 on correctness and a 3 on groundedness. The judge's reasoning quotes the sentences that did it: the draft says "there were 12 days remaining" and "your charge has been confirmed in our system", and no chunk says either. That is the same claim the in-graph reviewer flagged when it sent the draft back, so the offline judge and the online reviewer agree about this ticket. T-10004 gets a 3 on groundedness for the one step the specialist added on its own, "sign out and sign back in", which appears in no chunk; the rubric's 3 anchor says "one minor claim is unsupported", and that is the strict reading. An earlier run of this same block gave T-10004 a 5 on groundedness while its reasoning still noted the unsupported step. Same draft, same prompt, temperature 0, and a different number: the provider does not promise identical output, and a judge that moves between runs on one draft puts a ceiling on how well it can agree with anyone. Calibration, below, is how you measure the agreement that is left.
 
 ## Pairwise, run in both orders
 

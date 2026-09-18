@@ -175,7 +175,7 @@ curl -s -w '\nround trip: %{time_total}s\n' -X POST localhost:8200/tickets/T-100
 ```json
 {"ticket_id": "T-10083", "paused": true, "pending_write": {"tool": "add_ticket_comment",
   "args": {"ticket_id": "T-10083", "body": "Hi Ines,\n\nGreat question! Here's how to connect your Slack workspace to Quillstack:\n\n1. In Quillstack, go to Settings > Integrations > Slack.\n2. Click Connect to Slack. ...", "internal": false},
-  "idempotency_key": "T-10083:add_ticket_comment:7e616bde", "node": "resolve",
+  "idempotency_key": "T-10083:add_ticket_comment:7e616bde", "ticket_id": "T-10083", "node": "resolve",
   "summary": "add_ticket_comment: post a public reply on T-10083: ..."},
  "decision": null,
  "classification": {"type": "how_to", "urgency": "normal", "aimed_at_agent": false, "confidence": 0.95},

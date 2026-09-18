@@ -125,7 +125,7 @@ evidence.mkdir(parents=True, exist_ok=True)
 ```plain text
 ['__start__', 'input_guard', 'escalate']
 {'flags': ['injection:override', 'injection:prompt_leak', 'injection:inventory_request', 'classifier:1.00', 'quarantined'], 'risk': 1.0, 'quarantined': True}
-input_guard quarantined the ticket: risk 1.00 (flags: injection:override, injection:prompt_leak, injection:inventory_request, classifier:1.00)
+input_guard quarantined the ticket: risk 1.00 (flags: injection:override, injection:prompt_leak, injection:inventory_request, classifier:1.00, quarantined)
 [('add_ticket_comment', 'escalate', True), ('set_ticket_status', 'escalate', True)]
 ```
 

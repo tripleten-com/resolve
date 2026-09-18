@@ -95,7 +95,7 @@ print(f"three texts: {time.perf_counter() - t0:.2f} s")
 0.9999997615814209
 0.9999997615814209
 9.5367431640625e-07
-three texts: 0.36 s
+three texts: 0.53 s
 ```
 
 The second line is the whole reason the classifier does not get the final say. "Please ignore my previous message" scores 1.00, the same as the real attack. The model has learned that "ignore" plus "close" looks like an injection, and no threshold on its output alone separates the customer from the attacker.
