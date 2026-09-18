@@ -1,0 +1,8 @@
+index: resolve-kb
+embedding_model: all-MiniLM-L6-v2
+chunk_max_words: 220
+chunk_overlap_words: 30
+mode: hybrid
+k: 5
+candidates: 20
+rrf_k: 60

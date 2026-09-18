@@ -1,0 +1,11 @@
+line-length = 120
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]
+
+[lint.per-file-ignores]
+"evals/*" = ["E402"]
+"security/*" = ["E402"]
+"src/resolve/kb/*" = ["B905"]

@@ -1,0 +1,26 @@
+# Paste the `helpdesk` service under `services:` in compose.yaml and the
+# `resolve_helpdesk` entry under `volumes:`. Paths are relative to compose.yaml
+# at the repo root, so ../data from this folder is ./data there.
+
+services:
+  helpdesk:
+    build: ./helpdesk
+    container_name: resolve-helpdesk
+    ports:
+      - "8100:8100"
+    environment:
+      - HELPDESK_DB=/app/db/helpdesk.db
+      - HELPDESK_AUDIT_LOG=/app/db/audit.log
+      - HELPDESK_DATA_DIR=/data
+    volumes:
+      - resolve_helpdesk:/app/db
+      - ./data:/data:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8100/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+
+volumes:
+  resolve_helpdesk:

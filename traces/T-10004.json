@@ -1,0 +1,206 @@
+{
+  "ticket_id": "T-10004",
+  "ticket_type": "bug",
+  "note": "Local trace export (no LangSmith key in the reference build): the node sequence from the SqliteSaver checkpoint history and the checkpointed final state.",
+  "node_sequence": [
+    "__start__",
+    "input_guard",
+    "classify",
+    "bug_agent",
+    "review",
+    "bug_agent",
+    "review",
+    "output_guard",
+    "route",
+    "escalate",
+    "__start__",
+    "input_guard",
+    "classify",
+    "bug_agent",
+    "__start__",
+    "input_guard",
+    "classify",
+    "bug_agent",
+    "review",
+    "output_guard",
+    "route",
+    "escalate"
+  ],
+  "state": {
+    "ticket_id": "T-10004",
+    "ticket": {
+      "subject": "2FA code not working",
+      "body": "I'm trying to sign in but my 2FA code is rejected every single time. I've checked my phone clock and it's synced correctly. I'm using Google Authenticator and the code refreshes every 30 seconds like it should. This used to work fine last week. What's going on?",
+      "customer_email": "oscarmensah@gmail.com",
+      "plan": "Team",
+      "created_at": "2026-09-22T14:23:17Z",
+      "channel": "web"
+    },
+    "guard_input": {
+      "flags": [
+        "classifier:0.00"
+      ],
+      "risk": 0.001,
+      "quarantined": false
+    },
+    "classification": {
+      "type": "bug",
+      "urgency": "high",
+      "aimed_at_agent": false,
+      "confidence": 0.92
+    },
+    "docs": [
+      {
+        "doc_id": "kb-0021",
+        "chunk_id": "kb-0021#04",
+        "title": "Lost your 2FA device? Sign in with a recovery code",
+        "heading": "Troubleshooting",
+        "space": "public",
+        "text": "Lost your 2FA device? Sign in with a recovery code > Troubleshooting\n\n**I did not save my recovery codes and cannot access my authenticator app.**  \nContact support at support@quillstack.com from the email address associated with your Quillstack account. Include your workspace name and the email you use to sign in. Support will verify your identity and disable two-factor authentication on your account so you can sign in with your password. Response times vary by plan: 3 business days on Free, 1 business day on Team, and 4 business hours on Business.\n\n**My recovery code is rejected as invalid.**  \nRecovery codes are case-sensitive and must be entered exactly as shown when they were issued. Check for leading or trailing spaces if you copied the code from a document. If you have already used the code in a previous sign-in, it is consumed and will not work again. Try another code from your saved list.\n\n**I ran out of recovery codes.**  \nEach set includes 10 codes, and each code works only once. If you have used all 10, you must contact support to regain access. After support disables 2FA on your account, sign in with your password, then re-enable two-factor authentication to receive a new set of codes.",
+        "score": 0.03200204813108039
+      },
+      {
+        "doc_id": "kb-0021",
+        "chunk_id": "kb-0021#01",
+        "title": "Lost your 2FA device? Sign in with a recovery code",
+        "heading": "Before you start",
+        "space": "public",
+        "text": "Lost your 2FA device? Sign in with a recovery code > Before you start\n\nRecovery codes are issued when you first enable two-factor authentication. Quillstack generates 10 single-use codes, and you should save them securely\u2014in a password manager, encrypted file, or printed document stored offline. If you did not save your recovery codes and cannot access your authenticator app, you will need to contact support to regain access to your account.\n\nTwo-factor authentication is available on every plan. Each recovery code is alphanumeric, typically 8 to 10 characters, and is shown only once during setup.",
+        "score": 0.031754032258064516
+      },
+      {
+        "doc_id": "kb-0020",
+        "chunk_id": "kb-0020#04",
+        "title": "Set up two-factor authentication (2FA)",
+        "heading": "Troubleshooting",
+        "space": "public",
+        "text": "Set up two-factor authentication (2FA) > Troubleshooting\n\n**The code from my authenticator app is rejected.** Make sure the time on your phone is set to automatic. TOTP codes are time-based, and even a few minutes of clock drift will cause codes to fail. If the time is correct and codes still do not work, try entering the next code that appears after the current one refreshes.\n\n**I lost my phone and my recovery codes.** Contact support at support@quillstack.com from the email address on your account. Support will verify your identity and disable 2FA so you can sign in with your password. You should re-enable 2FA immediately after signing in.\n\n**I enabled 2FA but my session did not ask for a code.** You are still signed in from before you enabled 2FA. Sign out and sign in again to see the 2FA prompt.\n\n**Can I use SMS or email for 2FA instead of an app?** No. Quillstack supports only TOTP authenticator apps. SMS and email are less secure and are not offered.",
+        "score": 0.031544957774465976
+      },
+      {
+        "doc_id": "kb-0021",
+        "chunk_id": "kb-0021#05",
+        "title": "Lost your 2FA device? Sign in with a recovery code",
+        "heading": "Troubleshooting",
+        "space": "public",
+        "text": "Lost your 2FA device? Sign in with a recovery code > Troubleshooting\n\nyou must contact support to regain access. After support disables 2FA on your account, sign in with your password, then re-enable two-factor authentication to receive a new set of codes.\n\n**Can I generate new recovery codes without disabling 2FA?**  \nNo. The only way to receive new recovery codes is to reconfigure two-factor authentication. This invalidates your old codes and issues a fresh set of 10. If you want to refresh your codes but keep the same authenticator app, you can reconfigure 2FA using the same device.",
+        "score": 0.03131881575727918
+      }
+    ],
+    "draft": "Hi Oscar,\n\nThanks for the detailed information about your 2FA issue. I found a troubleshooting step in our documentation: if your authenticator app code is rejected even though your phone time is set to automatic, try entering the next code that appears after the current one refreshes. TOTP codes are time-based, and sometimes the server and client can be slightly out of sync.\n\nIf that doesn't resolve it, we've filed a bug report (ISS-1010) to investigate further, since your setup was working last week and you've already verified the most common causes. An engineer will look into the TOTP validation logic and server time synchronization.\n\nIn the meantime, if you have your recovery codes saved, you can use one of those to sign in. If you don't have them, please reply to this ticket and we can help you regain access to your account.\n\nWe'll follow up as soon as we have more information.\n\nQuillstack Support",
+    "citations": [
+      "kb-0020"
+    ],
+    "confidence": 0.72,
+    "tool_calls": [
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "2FA code not working rejected"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0021#04\", \"doc_id\": \"kb-0021\", \"title\": \"Lost your 2FA device? Sign in with a recovery code\", \"heading\": \"Troubleshooting\", \"space\": \"public\", \"text\": \"Lost your 2FA device? Sign in with a recovery code > Troubleshooting\\n\\n**I did not save my recovery codes and cannot access my authenticator app.** \\nContact support at support@quillstack.com from the email address associated with your Quillstack account. Include your workspace name and the email you use to sign in. Support will verify your identity and disable two-factor authentication on your account so you can sign in w... [1 result(s) dropped: injection risk]",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "bug_agent",
+        "dropped": 1
+      },
+      {
+        "name": "search_issues",
+        "args": {
+          "query": "2FA code rejected not working"
+        },
+        "result_summary": "{\"query\": \"2FA code rejected not working\", \"count\": 0, \"issues\": []}",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "bug_agent"
+      },
+      {
+        "name": "read_doc",
+        "args": {
+          "doc_id": "kb-0020"
+        },
+        "result_summary": "{\"doc_id\": \"kb-0020\", \"title\": \"Set up two-factor authentication (2FA)\", \"space\": \"public\", \"body\": \"Two-factor authentication adds a second layer of security to your Quillstack account by requiring a time-based code from your phone in addition to your password. You can enable 2FA from your account settings using any authenticator app that supports TOTP, such as Authy, Google Authenticator, or 1Password. When you turn on 2FA, Quillstack generates 10 single-use recovery codes that let you sign in if you lose access to your authenticator device.\\n\\n## Before you start\\n\\nYou need an authentic...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "bug_agent"
+      },
+      {
+        "name": "search_issues",
+        "args": {
+          "query": "2FA authenticator code rejected"
+        },
+        "result_summary": "{\"query\": \"2FA authenticator code rejected\", \"count\": 0, \"issues\": []}",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "bug_agent"
+      },
+      {
+        "name": "create_issue",
+        "args": {
+          "title": "2FA code rejected despite correct time sync and valid authenticator",
+          "body": "Customer report: 2FA codes from Google Authenticator are being rejected on every sign-in attempt, despite:\n- Phone clock set to automatic sync (verified by customer)\n- Code refreshing correctly every 30 seconds\n- Feature working correctly last week\n\nSteps to reproduce:\n1. Enable 2FA with Google Authenticator\n2. Attempt to sign in with valid TOTP code\n3. Code is rejected\n\nExpected: Code should be accepted\nActual: Code rejected every time\n\nPlan: Team\nChannel: web\nEmail: oscarmensah@gmail.com\n\nThis suggests a potential server-side time drift or validation issue, as the documented workaround (trying the next code after refresh) has not been mentioned as working by the customer. Engineering should investigate TOTP validation logic and server time synchronization.",
+          "ticket_id": "T-10004"
+        },
+        "idempotency_key": "T-10004:create_issue:7c4b6a54",
+        "write": true,
+        "node": "bug_agent",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"issue_id\\\": \\\"ISS-1010\\\",\\n \\\"created\\\": true,\\n \\\"title\\\": \\\"2FA code rejected despite correct time sync and valid authenticator\\\",\\n \\\"ticket_id\\\": \\\"T-10004\\\"\\n}\", \"id\": \"lc_827c4d00-f47d-4187-a361-962213753031\"}]"
+      },
+      {
+        "name": "add_ticket_comment",
+        "args": {
+          "ticket_id": "T-10004",
+          "body": "Resolve escalated this ticket.\nReason: output flags: chunk_dropped:1, wrote:create_issue; type bug never auto-resolves\nClassification: type=bug urgency=high aimed_at_agent=False confidence=0.92\nInput guard: risk=0.001 flags=['classifier:0.00']\nOutput guard: flags=['chunk_dropped:1', 'wrote:create_issue']\nReviewer: approve; reasons=[]; unsupported=[]\nTool calls:\n  - search_kb(query='2FA code not working rejected') -> [{\"chunk_id\": \"kb-0021#04\", \"doc_id\": \"kb-0021\", \"title\": \"Lost your 2FA device? Sign in with a recovery code\", \"heading\n  - search_issues(query='2FA code rejected not working') -> {\"query\": \"2FA code rejected not working\", \"count\": 0, \"issues\": []}\n  - read_doc(doc_id='kb-0020') -> {\"doc_id\": \"kb-0020\", \"title\": \"Set up two-factor authentication (2FA)\", \"space\": \"public\", \"body\": \"Two-factor authenti\n  - search_issues(query='2FA authenticator code rejected') -> {\"query\": \"2FA authenticator code rejected\", \"count\": 0, \"issues\": []}\n  - create_issue(title='2FA code rejected despite correct time s', body='Customer report: 2FA codes from Google A', ticket_id='T-10004') -> [{\"type\": \"text\", \"text\": \"{\\n \\\"issue_id\\\": \\\"ISS-1010\\\",\\n \\\"created\\\": true,\\n \\\"title\\\": \\\"2FA code rejected despite\nSources tried:\n  - kb-0021 Lost your 2FA device? Sign in with a recovery code (public)\n  - kb-0020 Set up two-factor authentication (2FA) (public)\nDraft reply (confidence 0.72, citations ['kb-0020']):\nHi Oscar,\n\nThanks for the detailed information about your 2FA issue. I found a troubleshooting step in our documentation: if your authenticator app code is rejected even though your phone time is set to automatic, try entering the next code that appears after the current one refreshes. TOTP codes are time-based, and sometimes the server and client can be slightly out of sync.\n\nIf that doesn't resolve it, we've filed a bug report (ISS-1010) to investigate further, since your setup was working last week and you've already verified the most common causes. An engineer will look into the TOTP validation logic and server time synchronization.\n\nIn the meantime, if you have your recovery codes saved, you can use one of those to sign in. If you don't have them, please reply to this ticket and we can help you regain access to your account.\n\nWe'll follow up as soon as we have more information.\n\nQuillstack Support",
+          "internal": true
+        },
+        "idempotency_key": "T-10004:add_ticket_comment:b9aba478",
+        "write": true,
+        "node": "escalate",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"comment_id\\\": 5,\\n \\\"ticket_id\\\": \\\"T-10004\\\",\\n \\\"internal\\\": true,\\n \\\"created\\\": false,\\n \\\"idempotency_key\\\": \\\"T-10004:add_ticket_comment:b9aba478\\\"\\n}\", \"id\": \"lc_a7f89b7c-b070-44be-a682-39fb25b0dba6\"}]"
+      },
+      {
+        "name": "set_ticket_status",
+        "args": {
+          "ticket_id": "T-10004",
+          "status": "escalated"
+        },
+        "idempotency_key": "T-10004:set_ticket_status:d04d9502",
+        "write": true,
+        "node": "escalate",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"ticket_id\\\": \\\"T-10004\\\",\\n \\\"status\\\": \\\"escalated\\\",\\n \\\"changed\\\": false,\\n \\\"idempotency_key\\\": \\\"T-10004:set_ticket_status:d04d9502\\\"\\n}\", \"id\": \"lc_280fe3ac-ea51-49d9-a12d-859af08c2c90\"}]"
+      }
+    ],
+    "pending_write": null,
+    "review": {
+      "verdict": "approve",
+      "reasons": [],
+      "unsupported_claims": [],
+      "revision_count": 0
+    },
+    "guard_output": {
+      "flags": [
+        "chunk_dropped:1",
+        "wrote:create_issue"
+      ],
+      "ok": false
+    },
+    "decision": "escalate",
+    "escalation_reason": "output flags: chunk_dropped:1, wrote:create_issue; type bug never auto-resolves",
+    "usage": {
+      "input_tokens": 22979,
+      "output_tokens": 1005,
+      "cost_usd": 0.034004,
+      "latency_ms": 35986
+    }
+  }
+}

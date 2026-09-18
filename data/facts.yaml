@@ -1,0 +1,205 @@
+# Quillstack canonical product facts.
+# Every help-center article, internal page, and support ticket in this dataset
+# must agree with these sentences. Ids are stable; never renumber.
+facts:
+  # ---- plans ----
+  - id: F001
+    topic: plans
+    text: "Quillstack offers three plans: Free, Team, and Business."
+  - id: F002
+    topic: plans
+    text: "The Free plan is limited to 3 members and 1 workspace."
+  - id: F003
+    topic: plans
+    text: "The Team plan costs $12 per member per month when billed monthly."
+  - id: F004
+    topic: plans
+    text: "The Business plan costs $28 per member per month when billed monthly."
+  # ---- billing ----
+  - id: F005
+    topic: billing
+    text: "Annual billing is charged up front and costs 10 times the monthly price (two months free)."
+  # ---- plans ----
+  - id: F006
+    topic: plans
+    text: "File storage is 500 MB per workspace on Free, 50 GB per workspace on Team, and 500 GB per workspace on Business; the maximum size of a single uploaded file is 100 MB on every plan."
+  # ---- projects ----
+  - id: F007
+    topic: projects
+    text: "A project can hold at most 5,000 open tasks; archived projects are read-only and can be restored by an Admin or Owner from Projects > Archived."
+  # ---- pages ----
+  - id: F008
+    topic: pages
+    text: "Public page links (Share > Anyone with the link) are available on Team and Business; on Free, pages can only be shared with workspace members."
+  # ---- billing ----
+  - id: F009
+    topic: billing
+    text: "Refunds are only possible within 14 days of a charge."
+  - id: F010
+    topic: billing
+    text: "Refunds are never issued automatically or by the support assistant; every refund request is reviewed by the billing team, which replies within 3 business days."
+  - id: F011
+    topic: billing
+    text: "Adding a seat mid-cycle is prorated: you are charged only for the days remaining in the current billing cycle."
+  - id: F012
+    topic: billing
+    text: "Removing a seat mid-cycle creates a credit that is applied to the next invoice; removed seats are never refunded in cash."
+  - id: F013
+    topic: billing
+    text: "Invoices are numbered INV-YYYYMM-NNNNN (for example INV-202608-00417), issued on the first day of each billing cycle, emailed to the billing contact, and available under Settings > Billing > Invoices."
+  - id: F014
+    topic: billing
+    text: "A failed payment is retried automatically 3 times, on day 1, day 3, and day 7 after the failure; if every retry fails the workspace switches to read-only mode."
+  - id: F015
+    topic: billing
+    text: "A workspace in read-only mode after a payment failure keeps all of its data for 30 days, and updating the payment method restores full access immediately."
+  - id: F016
+    topic: billing
+    text: "If the same card is charged the same amount twice within 24 hours, the second charge is a duplicate; after review, the billing team reverses it within 5 business days."
+  - id: F017
+    topic: billing
+    text: "Accepted payment methods are Visa, Mastercard, and American Express; bank transfer with net-30 terms is available only on Business annual subscriptions."
+  - id: F018
+    topic: billing
+    text: "Plan upgrades take effect immediately; plan downgrades and cancellations take effect at the end of the current billing cycle."
+  - id: F019
+    topic: billing
+    text: "Supported billing currencies are USD, EUR, and GBP; the currency is chosen when the workspace is created and cannot be changed later."
+  - id: F020
+    topic: billing
+    text: "A VAT or tax ID added under Settings > Billing > Tax details appears on invoices issued after it is saved and is not applied to earlier invoices."
+  - id: F021
+    topic: billing
+    text: "Support discusses billing details only with the Owner or Admins of the workspace that was charged, and never shares information about another customer's workspace."
+  # ---- api ----
+  - id: F022
+    topic: api
+    text: "API keys expire after 30 days on Free, 90 days on Team, and 365 days on Business, and must be rotated before they expire."
+  - id: F023
+    topic: api
+    text: "API keys begin with the prefix qs_live_ and are shown in full only once, at the moment of creation."
+  - id: F024
+    topic: api
+    text: "The API rate limit is 600 requests per minute per API key."
+  - id: F025
+    topic: api
+    text: "When the rate limit is exceeded the API returns HTTP 429 with error code QS-1029 and a Retry-After header giving the wait in seconds."
+  - id: F026
+    topic: api
+    text: "Error QS-1042 means the API key has expired."
+  - id: F027
+    topic: api
+    text: "Error QS-1041 means the API key is invalid or has been revoked."
+  - id: F028
+    topic: api
+    text: "The API base URL is https://api.quillstack.com/v2 and the key is sent as Authorization: Bearer qs_live_... on every request."
+  - id: F029
+    topic: api
+    text: "List endpoints use cursor pagination: page_size defaults to 50 and is capped at 200, and the response field next_cursor is null on the last page."
+  - id: F030
+    topic: api
+    text: "Webhook payloads are signed with HMAC-SHA256; the hex signature is sent in the X-Quillstack-Signature header and signing secrets begin with whsec_."
+  - id: F031
+    topic: api
+    text: "A webhook delivery that does not receive a 2xx response is retried up to 5 times with exponential backoff over 24 hours, after which the endpoint is disabled."
+  - id: F032
+    topic: api
+    text: "A workspace may have at most 1 active API key on Free, 10 on Team, and 50 on Business."
+  - id: F033
+    topic: api
+    text: "Error QS-1003 means the request has no Authorization header; QS-1007 means the request body failed validation and the response field errors lists each invalid field; QS-1013 means the resource does not exist or the key's workspace cannot access it."
+  - id: F034
+    topic: api
+    text: "Error QS-1050 means the workspace is in read-only mode, so write requests are rejected."
+  - id: F035
+    topic: api
+    text: "Error QS-1061 means the webhook endpoint was disabled after repeated failed deliveries and must be re-enabled under Settings > Integrations > Webhooks."
+  - id: F036
+    topic: api
+    text: "Error QS-1077 means an export job failed and a new export must be started."
+  - id: F037
+    topic: api
+    text: "Error QS-1099 is an internal server error; retry after 60 seconds and quote the request_id from the response when contacting support."
+  - id: F038
+    topic: api
+    text: "The IP allowlist for API keys is a Business-only setting, api.ip_allowlist, and accepts up to 20 CIDR ranges."
+  - id: F039
+    topic: api
+    text: "Webhook event types are page.created, page.updated, page.deleted, task.created, task.updated, task.completed, and project.archived."
+  # ---- security ----
+  - id: F040
+    topic: security
+    text: "SSO (SAML 2.0 and OIDC) is available on the Business plan only."
+  # ---- account ----
+  - id: F041
+    topic: account
+    text: "Password reset links expire after 60 minutes and can be used only once."
+  - id: F042
+    topic: account
+    text: "Two-factor authentication (TOTP) is available on every plan, and enabling it issues 10 single-use recovery codes."
+  - id: F043
+    topic: account
+    text: "After 5 failed sign-in attempts the account is locked for 15 minutes."
+  - id: F044
+    topic: account
+    text: "Web sessions expire after 30 days of inactivity; mobile app sessions expire after 90 days."
+  # ---- security ----
+  - id: F045
+    topic: security
+    text: "Requiring 2FA for every member (Settings > Security > Require 2FA) is available on Team and Business."
+  # ---- permissions ----
+  - id: F046
+    topic: permissions
+    text: "Workspace roles are Owner, Admin, Editor, and Viewer; only an Owner can delete the workspace, transfer ownership, or change the billing contact."
+  # ---- security ----
+  - id: F047
+    topic: security
+    text: "Security vulnerabilities are reported to security@quillstack.com; Quillstack acknowledges reports within 2 business days and does not run a paid bug bounty program."
+  - id: F048
+    topic: security
+    text: "Quillstack staff can never see a customer's password and support never asks for it."
+  - id: F049
+    topic: security
+    text: "The SAML settings are sso.entity_id, sso.sign_in_url, and sso.certificate; the ACS URL for your identity provider is https://app.quillstack.com/sso/saml/acs; setting sso.enforce to true blocks password sign-in for everyone except Owners, who keep it as a recovery path."
+  # ---- export ----
+  - id: F050
+    topic: export
+    text: "Workspace exports can take up to 24 hours; the export is a single .zip (pages as Markdown, projects and tasks as JSON, all attachments) and the emailed download link is valid for 7 days."
+  # ---- retention ----
+  - id: F051
+    topic: retention
+    text: "Deleted pages stay in Trash for 30 days and can be restored by any Editor, Admin, or Owner; after 30 days they are permanently deleted."
+  - id: F052
+    topic: retention
+    text: "A deleted workspace is retained for 14 days and can be restored by an Owner from Settings > Workspaces > Deleted; after 14 days it is permanently deleted."
+  # ---- import ----
+  - id: F053
+    topic: import
+    text: "Importers exist for Notion, Confluence, and Markdown .zip archives; only 1 import can run per workspace at a time and the archive may be at most 2 GB."
+  # ---- retention ----
+  - id: F054
+    topic: retention
+    text: "Page version history is kept for 30 days on Free, 180 days on Team, and without limit on Business."
+  # ---- security ----
+  - id: F055
+    topic: security
+    text: "The audit log is Business-only, retained for 365 days, and exportable as CSV from Settings > Security > Audit log."
+  # ---- integrations ----
+  - id: F056
+    topic: integrations
+    text: "The Slack integration must be installed by a workspace Admin or Owner and can post to at most 20 Slack channels per workspace; the default channel is set with slack.default_channel."
+  - id: F057
+    topic: integrations
+    text: "The GitHub integration links a pull request to a task when the PR title or branch name contains the task key, which has the form PROJECTKEY-NUMBER, for example DOCS-142."
+  # ---- notifications ----
+  - id: F058
+    topic: notifications
+    text: "The email digest is sent once a day at 09:00 in the workspace time zone and is configured under Settings > Notifications > Digest."
+  # ---- mobile ----
+  - id: F059
+    topic: mobile
+    text: "The mobile app requires iOS 16 or later or Android 11 or later; offline edits sync on reconnect with conflicts resolved as last write wins; billing settings cannot be changed from the mobile app, only at app.quillstack.com."
+  # ---- support ----
+  - id: F060
+    topic: support
+    text: "First-response targets for support are 3 business days on Free, 1 business day on Team, and 4 business hours on Business."

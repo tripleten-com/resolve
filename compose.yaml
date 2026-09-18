@@ -1,0 +1,79 @@
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.19.0
+    container_name: resolve-opensearch
+    environment:
+      - discovery.type=single-node
+      - DISABLE_SECURITY_PLUGIN=true
+      - DISABLE_INSTALL_DEMO_CONFIG=true
+      - OPENSEARCH_JAVA_OPTS=-Xms1g -Xmx1g
+      - bootstrap.memory_lock=true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+    volumes:
+      - resolve_osdata:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  helpdesk:
+    build: ./helpdesk
+    container_name: resolve-helpdesk
+    ports:
+      - "${HELPDESK_PORT:-8100}:8100"
+    environment:
+      - HELPDESK_DB=/app/db/helpdesk.db
+      - HELPDESK_AUDIT_LOG=/app/db/audit.log
+      - HELPDESK_DATA_DIR=/data
+    volumes:
+      - resolve_helpdesk:/app/db
+      - ./data:/data:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8100/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 5s
+
+  agent:
+    build: .
+    container_name: resolve-agent
+    ports:
+      - "${AGENT_PORT:-8200}:8200"
+    environment:
+      # The key is interpolated from your .env at `docker compose up`; it is never in the image.
+      - LLM_BASE_URL=${LLM_BASE_URL}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_MODEL=${LLM_MODEL}
+      - LLM_MODEL_REVIEW=${LLM_MODEL_REVIEW:-${LLM_MODEL}}
+      - LANGSMITH_TRACING=${LANGSMITH_TRACING:-false}
+      - LANGSMITH_API_KEY=${LANGSMITH_API_KEY:-}
+      - LANGSMITH_PROJECT=${LANGSMITH_PROJECT:-resolve}
+      - OPENSEARCH_URL=http://opensearch:9200
+      - HELPDESK_URL=http://helpdesk:8100
+    volumes:
+      - ./data:/app/data:ro
+      - resolve_agent:/app/var
+    depends_on:
+      opensearch:
+        condition: service_healthy
+      helpdesk:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8200/health')"]
+      interval: 30s
+      timeout: 15s
+      retries: 5
+      start_period: 90s
+
+volumes:
+  resolve_osdata:
+  resolve_helpdesk:
+  resolve_agent:

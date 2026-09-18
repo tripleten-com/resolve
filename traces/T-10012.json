@@ -1,0 +1,190 @@
+{
+  "ticket_id": "T-10012",
+  "ticket_type": "how_to_via_api",
+  "note": "Local trace export (no LangSmith key in the reference build): the node sequence from the SqliteSaver checkpoint history and the checkpointed final state.",
+  "node_sequence": [
+    "__start__",
+    "input_guard",
+    "classify",
+    "knowledge_agent",
+    "review",
+    "output_guard",
+    "route",
+    "resolve"
+  ],
+  "state": {
+    "ticket_id": "T-10012",
+    "ticket": {
+      "subject": "How to nest pages or create subpages?",
+      "body": "I'm trying to organize our documentation and I'd like to create a hierarchy where some pages are nested under others. Is there a way to make subpages or create a folder structure? I can see how to create new pages but I'm not sure how to organize them into a tree.",
+      "customer_email": "tomas.meyer@cobaltbridge.net",
+      "plan": "Business",
+      "created_at": "2026-09-19T18:41:26Z",
+      "channel": "web"
+    },
+    "guard_input": {
+      "flags": [
+        "classifier:0.00"
+      ],
+      "risk": 0.0,
+      "quarantined": false
+    },
+    "classification": {
+      "type": "how_to",
+      "urgency": "normal",
+      "aimed_at_agent": false,
+      "confidence": 0.95
+    },
+    "docs": [
+      {
+        "doc_id": "kb-0005",
+        "chunk_id": "kb-0005#00",
+        "title": "Create and organize pages",
+        "heading": "",
+        "space": "public",
+        "text": "Create and organize pages\n\nPages are the foundation of your workspace, where you write documentation, meeting notes, project briefs, and any other content your team needs to share. You can organize pages into folders, add attachments, and format text with Markdown. This guide covers creating pages, organizing them, and managing attachments.",
+        "score": 0.03225806451612903
+      },
+      {
+        "doc_id": "kb-0005",
+        "chunk_id": "kb-0005#03",
+        "title": "Create and organize pages",
+        "heading": "Organize pages into folders",
+        "space": "public",
+        "text": "Create and organize pages > Organize pages into folders\n\n1. In the sidebar, click the **\u00b7\u00b7\u00b7** menu next to a page and select **Move to folder**.\n2. Choose an existing folder from the list or click **New folder** to create one.\n3. Enter a folder name and click **Create**. The page moves into the folder and the sidebar updates.\n4. To move a page by dragging, click and hold the page name in the sidebar, then drag it onto a folder. Release to drop it into the folder.\n5. To create a nested folder, drag one folder onto another. You can nest folders up to 5 levels deep.",
+        "score": 0.03177805800756621
+      },
+      {
+        "doc_id": "kb-0062",
+        "chunk_id": "kb-0062#07",
+        "title": "Import from Confluence",
+        "heading": "Troubleshooting",
+        "space": "public",
+        "text": "Import from Confluence > Troubleshooting\n\ndid not import.** Comments and page history are not included in Confluence exports, so the Quillstack importer cannot bring them over. Only the latest version of each page is imported.\n\n**The imported pages are in the wrong order.** The importer preserves the parent-child hierarchy from Confluence but does not guarantee the same sibling order. You can manually reorder pages in Quillstack by dragging them in the sidebar.",
+        "score": 0.03036576949620428
+      },
+      {
+        "doc_id": "kb-0005",
+        "chunk_id": "kb-0005#01",
+        "title": "Create and organize pages",
+        "heading": "Before you start",
+        "space": "public",
+        "text": "Create and organize pages > Before you start\n\nYou must be an Editor, Admin, or Owner to create or edit pages. Viewers can read pages but cannot create or modify them. Check your role under Settings > Members. Pages you create are visible to everyone in the workspace by default, but you can change permissions for individual pages under Share > Workspace members. File storage is 500 MB per workspace on Free, 50 GB per workspace on Team, and 500 GB per workspace on Business; the maximum size of a single uploaded file is 100 MB on every plan.",
+        "score": 0.030158730158730156
+      },
+      {
+        "doc_id": "kb-0061",
+        "chunk_id": "kb-0061#03",
+        "title": "Import from Notion",
+        "heading": "What gets imported",
+        "space": "public",
+        "text": "Import from Notion > What gets imported\n\nThe Notion importer converts your content to Quillstack format:\n\n| Notion element | Imported as |\n|----------------|-------------|\n| Pages | Quillstack pages |\n| Nested pages | Child pages in the same hierarchy |\n| Text, headings, lists | Markdown in Quillstack pages |\n| Images, PDFs, other files | File attachments (subject to storage limits) |\n| Databases | Quillstack pages with tables |\n| Comments | Not imported |\n| Page history | Not imported; only the latest version is imported |\n\nNotion databases are converted to Quillstack pages containing Markdown tables. If you need database functionality, you can recreate the structure using Quillstack's page templates and linked databases after the import completes.",
+        "score": 0.028404512489927477
+      },
+      {
+        "doc_id": "kb-0064",
+        "chunk_id": "kb-0064#02",
+        "title": "Export your workspace",
+        "heading": "Export contents",
+        "space": "public",
+        "text": "Export your workspace > Export contents\n\nThe export archive is a single .zip file organized by content type. The structure looks like this:\n\n| Folder | Contents | Format |\n|--------|----------|--------|\n| `pages/` | All pages, including nested pages | Markdown (.md) |\n| `projects/` | Project metadata and task lists | JSON (.json) |\n| `attachments/` | All uploaded files | Original format |\n| `metadata/` | Workspace settings and member list | JSON (.json) |\n\nPages are exported as Markdown with front matter containing the page title, author, creation date, and last modified date. Nested pages are placed in subfolders that match your workspace structure. Projects and tasks are exported as JSON arrays with all fields, including custom fields, assignees, due dates, and completion status.",
+        "score": 0.030309988518943745
+      },
+      {
+        "doc_id": "kb-0011",
+        "chunk_id": "kb-0011#00",
+        "title": "Page templates and databases",
+        "heading": "",
+        "space": "public",
+        "text": "Page templates and databases\n\nPage templates let you create reusable structures for common page types, and databases turn collections of pages into structured records you can filter, sort, and view as tables or boards. Both features help you organize information consistently across your workspace.",
+        "score": 0.030158730158730156
+      }
+    ],
+    "draft": "Hi Tomas,\n\nGreat question! Quillstack lets you organize pages into a folder structure to create the hierarchy you're looking for.\n\nHere's how to organize your documentation:\n\n1. In the sidebar, click the **\u00b7\u00b7\u00b7** menu next to a page and select **Move to folder**.\n2. Choose an existing folder from the list or click **New folder** to create one.\n3. Enter a folder name and click **Create**. The page moves into the folder and the sidebar updates.\n\nYou can also drag and drop pages directly onto folders in the sidebar. If you want to create nested folders (folders within folders), just drag one folder onto another. You can nest folders up to 5 levels deep, which should give you plenty of room to organize your documentation structure.\n\nLet me know if you run into any issues!\n\nQuillstack Support",
+    "citations": [
+      "kb-0005"
+    ],
+    "confidence": 0.95,
+    "tool_calls": [
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "nest pages subpages hierarchy"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0005#00\", \"doc_id\": \"kb-0005\", \"title\": \"Create and organize pages\", \"heading\": \"\", \"space\": \"public\", \"text\": \"Create and organize pages\\n\\nPages are the foundation of your workspace, where you write documentation, meeting notes, project briefs, and any other content your team needs to share. You can organize pages into folders, add attachments, and format text with Markdown. This guide covers creating pages, organizing them, and managing attachments.\", \"score\": 0.03225806451612903}, {\"chunk_id\": \"kb-0005#03\", \"doc_id\": \"kb-0005\", \"title\": \"Create and organize pages\", \"he...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "create folder structure organize pages tree"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0005#00\", \"doc_id\": \"kb-0005\", \"title\": \"Create and organize pages\", \"heading\": \"\", \"space\": \"public\", \"text\": \"Create and organize pages\\n\\nPages are the foundation of your workspace, where you write documentation, meeting notes, project briefs, and any other content your team needs to share. You can organize pages into folders, add attachments, and format text with Markdown. This guide covers creating pages, organizing them, and managing attachments.\", \"score\": 0.03252247488101534}, {\"chunk_id\": \"kb-0005#03\", \"doc_id\": \"kb-0005\", \"title\": \"Create and organize pages\", \"he...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "read_doc",
+        "args": {
+          "doc_id": "kb-0005"
+        },
+        "result_summary": "{\"doc_id\": \"kb-0005\", \"title\": \"Create and organize pages\", \"space\": \"public\", \"body\": \"Pages are the foundation of your workspace, where you write documentation, meeting notes, project briefs, and any other content your team needs to share. You can organize pages into folders, add attachments, and format text with Markdown. This guide covers creating pages, organizing them, and managing attachments.\\n\\n## Before you start\\n\\nYou must be an Editor, Admin, or Owner to create or edit pages. Viewers can read pages but cannot create or modify them. Check your role under Settings > Members. Page...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "add_ticket_comment",
+        "args": {
+          "ticket_id": "T-10012",
+          "body": "Hi Tomas,\n\nGreat question! Quillstack lets you organize pages into a folder structure to create the hierarchy you're looking for.\n\nHere's how to organize your documentation:\n\n1. In the sidebar, click the **\u00b7\u00b7\u00b7** menu next to a page and select **Move to folder**.\n2. Choose an existing folder from the list or click **New folder** to create one.\n3. Enter a folder name and click **Create**. The page moves into the folder and the sidebar updates.\n\nYou can also drag and drop pages directly onto folders in the sidebar. If you want to create nested folders (folders within folders), just drag one folder onto another. You can nest folders up to 5 levels deep, which should give you plenty of room to organize your documentation structure.\n\nLet me know if you run into any issues!\n\nQuillstack Support",
+          "internal": false
+        },
+        "idempotency_key": "T-10012:add_ticket_comment:193ebadf",
+        "write": true,
+        "node": "resolve",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"comment_id\\\": 6,\\n \\\"ticket_id\\\": \\\"T-10012\\\",\\n \\\"internal\\\": false,\\n \\\"created\\\": false,\\n \\\"idempotency_key\\\": \\\"T-10012:add_ticket_comment:193ebadf\\\"\\n}\", \"id\": \"lc_1a6ef227-d0ec-4dfa-8cfd-1889b1a09f1b\"}]"
+      },
+      {
+        "name": "set_ticket_status",
+        "args": {
+          "ticket_id": "T-10012",
+          "status": "resolved"
+        },
+        "idempotency_key": "T-10012:set_ticket_status:4dbe7b64",
+        "write": true,
+        "node": "resolve",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"ticket_id\\\": \\\"T-10012\\\",\\n \\\"status\\\": \\\"resolved\\\",\\n \\\"changed\\\": true,\\n \\\"idempotency_key\\\": \\\"T-10012:set_ticket_status:4dbe7b64\\\"\\n}\", \"id\": \"lc_2d7591cb-d137-4c15-8b71-7c0c4e3770d2\"}]"
+      }
+    ],
+    "pending_write": null,
+    "review": {
+      "verdict": "approve",
+      "reasons": [],
+      "unsupported_claims": [],
+      "revision_count": 0
+    },
+    "guard_output": {
+      "flags": [],
+      "ok": true
+    },
+    "decision": "auto_resolve",
+    "escalation_reason": "",
+    "usage": {
+      "input_tokens": 13551,
+      "output_tokens": 621,
+      "cost_usd": 0.02232,
+      "latency_ms": 20858
+    }
+  }
+}

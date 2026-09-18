@@ -1,0 +1,19 @@
+# Which specialist gets which tool, and which tools are writes.
+# agents.py reads this and hands each specialist only its own list.
+agents:
+  knowledge_agent: [search_kb, read_doc]
+  billing_agent: [search_kb, read_doc, get_account]
+  bug_agent: [search_kb, read_doc, search_issues, create_issue]
+
+# terminal nodes; not agents, but they use these two tools behind the same approval pause
+writeback:
+  resolve: [add_ticket_comment, set_ticket_status]
+  escalate: [add_ticket_comment, set_ticket_status]
+
+# every tool on this list pauses the run with interrupt() and carries an idempotency key
+writes: [create_issue, add_ticket_comment, set_ticket_status]
+
+# tools served by src/resolve/mcp_server.py (the rest are plain Python in src/resolve/tools/kb.py)
+mcp_server:
+  name: helpdesk
+  module: resolve.mcp_server

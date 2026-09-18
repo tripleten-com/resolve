@@ -1,0 +1,45 @@
+== Resolve dataset validation ==
+facts: 60
+kb public: 75 articles, 52068 words (min 504, max 900)
+kb internal: 10 pages, 8089 words (min 601, max 887)
+kb injection seeds: 3 in ['kb-0103', 'kb-0106', 'kb-0109']
+facts covered by at least one article: 60/60
+tickets dev: {"tickets": 200, "types": {"how_to": 90, "bug": 40, "billing": 50, "security": 20}, "injections": 16, "unanswerable_how_to": 9, "how_to": 90, "distinct_emails": 151, "urgency": {"normal": 116, "low": 27, "high": 57}, "expected_action": {"auto_resolve": 113, "create_issue": 40, "escalate": 47}, "injection_kinds": {"direct": 4, "indirect": 3, "exfiltration": 3, "excessive_agency": 3, "jailbreak": 3}, "with_logs_or_code": 14}
+tickets heldout: {"tickets": 100, "types": {"billing": 25, "how_to": 45, "bug": 20, "security": 10}, "injections": 8, "unanswerable_how_to": 4, "how_to": 45, "distinct_emails": 85, "urgency": {"normal": 55, "high": 26, "low": 19}, "expected_action": {"escalate": 25, "auto_resolve": 55, "create_issue": 20}, "injection_kinds": {"indirect": 2, "exfiltration": 2, "excessive_agency": 2, "jailbreak": 1, "direct": 1}, "with_logs_or_code": 10}
+ticket ids unique: True; total tickets 300
+accounts: 200 (all ticket emails covered: True)
+eval retrieval_dev: {'queries': 80, 'with_code_or_key': 8, 'two_gold': 21}
+eval retrieval_heldout: {'queries': 40, 'with_code_or_key': 5, 'two_gold': 14}
+eval injection_seed: {'attack': 20, 'benign': 20}, kinds: {'direct': 2, 'role_reassignment': 2, 'fake_delimiters': 2, 'encoded': 2, 'markdown_exfiltration': 2, 'tool_abuse': 3, 'jailbreak': 2, 'indirect': 2, 'exfiltration': 2, 'excessive_agency': 1, 'lookalike_ignore': 2, 'lookalike_instructions': 1, 'lookalike_system': 2, 'lookalike_roleplay': 2, 'lookalike_base64': 2, 'lookalike_markdown': 2, 'lookalike_close': 2, 'lookalike_refund': 1, 'lookalike_admin': 1, 'lookalike_tools': 1, 'lookalike_prompt': 1, 'lookalike_forward': 1, 'lookalike_log': 1, 'lookalike_jailbreak': 1}
+warnings: 30
+  WARN kb-0004: missing section '## Steps'
+  WARN kb-0015: no table or code block
+  WARN kb-0017: no table or code block
+  WARN kb-0019: no table or code block
+  WARN kb-0021: no table or code block
+  WARN kb-0031: missing section '## Steps'
+  WARN kb-0041: no table or code block
+  WARN kb-0043: missing section '## Steps'
+  WARN kb-0056: no table or code block
+  WARN kb-0070: missing section '## Steps'
+  WARN kb-0070: missing section '## Troubleshooting'
+  WARN kb-0072: missing section '## Troubleshooting'
+  WARN kb-0073: missing section '## Steps'
+  WARN kb-0073: missing section '## Troubleshooting'
+  WARN kb-0074: missing section '## Troubleshooting'
+  WARN kb-0075: missing section '## Steps'
+  WARN kb-0101: no table or code block
+  WARN kb-0102: missing section '## Steps'
+  WARN kb-0102: missing section '## Troubleshooting'
+  WARN kb-0103: no table or code block
+  WARN kb-0104: missing section '## Steps'
+  WARN kb-0104: missing section '## Troubleshooting'
+  WARN kb-0105: missing section '## Before you start'
+  WARN kb-0105: missing section '## Steps'
+  WARN kb-0105: missing section '## Troubleshooting'
+  WARN kb-0106: missing section '## Troubleshooting'
+  WARN kb-0107: missing section '## Troubleshooting'
+  WARN kb-0107: no table or code block
+  WARN kb-0108: missing section '## Troubleshooting'
+  WARN kb-0110: no table or code block
+errors: 0

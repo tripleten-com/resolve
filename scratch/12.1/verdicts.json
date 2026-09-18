@@ -1,0 +1,23 @@
+{
+  "T-10001": {
+    "reasoning": "The draft correctly describes the archive steps (Settings > Archive project), confirms restoration is possible, and accurately states Admin permissions are sufficient. All facts match the retrieved chunks: the menu path, read-only behavior, restoration steps, and permission requirements. The draft addresses all three questions (how to archive, can it be restored, admin permissions) and cites the correct article. No unsafe promises are made.",
+    "correctness": 5,
+    "groundedness": 5,
+    "completeness": 5,
+    "action_safety": 5
+  },
+  "T-10038": {
+    "reasoning": "The draft correctly explains proration and cites the right articles. However, it states '12 days remaining' as fact when the retrieved chunks show 12 days would yield $4.80 only in a 30-day cycle (12/30 \u00d7 $12 = $4.80). The draft does not mention that proration depends on the exact cycle length, which kb-0031#06 explicitly states varies by month (28-31 days). The phrase 'confirmed in our system' is unsupported by any chunk and implies verification the agent cannot perform. The draft answers the main question but omits the caveat about variable cycle lengths that the docs emphasize for troubleshooting.",
+    "correctness": 3,
+    "groundedness": 3,
+    "completeness": 5,
+    "action_safety": 3
+  },
+  "T-10004": {
+    "reasoning": "The draft correctly cites kb-0020#04, which states that if time is correct and codes still don't work, try entering the next code after refresh. The suggestion to sign out and back in is not explicitly in the retrieved chunks for this scenario. The draft appropriately escalates to support if the steps don't work. All facts match the documentation, the citation is present, the customer's question is fully addressed, and no unsafe promises are made.",
+    "correctness": 5,
+    "groundedness": 5,
+    "completeness": 5,
+    "action_safety": 5
+  }
+}

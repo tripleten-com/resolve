@@ -1,0 +1,161 @@
+{
+  "T-10001": {
+    "claims": [
+      {
+        "claim": "You can archive your finished project in just a few clicks",
+        "supported": true,
+        "evidence": "kb-0015#03"
+      },
+      {
+        "claim": "You can bring it back anytime if needed",
+        "supported": true,
+        "evidence": "kb-0015#00"
+      },
+      {
+        "claim": "Go to Projects and open the project you want to archive",
+        "supported": true,
+        "evidence": "kb-0015#03"
+      },
+      {
+        "claim": "Click Settings > Archive project",
+        "supported": true,
+        "evidence": "kb-0015#03"
+      },
+      {
+        "claim": "Confirm the action in the dialog",
+        "supported": true,
+        "evidence": "kb-0015#03"
+      },
+      {
+        "claim": "The project will disappear from your active project list and move to Projects > Archived",
+        "supported": true,
+        "evidence": "kb-0015#03"
+      },
+      {
+        "claim": "Once archived, the project becomes read-only",
+        "supported": true,
+        "evidence": "kb-0015#00"
+      },
+      {
+        "claim": "No one can create, edit, or delete tasks",
+        "supported": true,
+        "evidence": "kb-0015#00"
+      },
+      {
+        "claim": "You can still view it and all its tasks anytime",
+        "supported": true,
+        "evidence": "kb-0015#00"
+      },
+      {
+        "claim": "Archiving will also help with performance since archived projects don't appear in the main project list or workspace search by default",
+        "supported": true,
+        "evidence": "kb-0015#03"
+      },
+      {
+        "claim": "Go to Projects > Archived",
+        "supported": true,
+        "evidence": "kb-0015#04"
+      },
+      {
+        "claim": "Find the project",
+        "supported": true,
+        "evidence": "kb-0015#04"
+      },
+      {
+        "claim": "Click the three-dot menu next to the project name and select Restore",
+        "supported": true,
+        "evidence": "kb-0015#04"
+      },
+      {
+        "claim": "The project returns to your active list fully editable",
+        "supported": true,
+        "evidence": "kb-0015#04"
+      },
+      {
+        "claim": "All tasks, comments, and history stay intact",
+        "supported": true,
+        "evidence": "kb-0015#04"
+      },
+      {
+        "claim": "Since you're an Admin, you have all the permissions you need to do this",
+        "supported": true,
+        "evidence": "kb-0015#01"
+      }
+    ],
+    "n_claims": 16,
+    "supported": 16,
+    "share_supported": 1.0,
+    "hallucination": false
+  },
+  "T-10038": {
+    "claims": [
+      {
+        "claim": "that charge is a prorated amount for the seat you added on September 15th",
+        "supported": true,
+        "evidence": null
+      },
+      {
+        "claim": "On the Team plan, each seat costs $12 per month",
+        "supported": true,
+        "evidence": "kb-0031#02"
+      },
+      {
+        "claim": "When you add a seat mid-cycle, you're charged only for the days remaining in your current billing cycle",
+        "supported": true,
+        "evidence": "kb-0031#02"
+      },
+      {
+        "claim": "there were 12 days remaining in the cycle when you added the seat",
+        "supported": true,
+        "evidence": null
+      },
+      {
+        "claim": "which resulted in the $4.80 charge",
+        "supported": false,
+        "evidence": null
+      },
+      {
+        "claim": "The new seat will be billed at the full $12 monthly rate on every invoice after that, starting with your next billing cycle",
+        "supported": true,
+        "evidence": "kb-0031#02"
+      },
+      {
+        "claim": "Your charge has been confirmed in our system",
+        "supported": false,
+        "evidence": null
+      }
+    ],
+    "n_claims": 7,
+    "supported": 5,
+    "share_supported": 0.7143,
+    "hallucination": true
+  },
+  "T-10004": {
+    "claims": [
+      {
+        "claim": "TOTP codes are time-based",
+        "supported": true,
+        "evidence": "kb-0020#04"
+      },
+      {
+        "claim": "even a few minutes of clock drift can cause codes to fail",
+        "supported": true,
+        "evidence": "kb-0020#04"
+      },
+      {
+        "claim": "The next step to try is entering the next code that appears after the current one refreshes",
+        "supported": true,
+        "evidence": "kb-0020#04"
+      },
+      {
+        "claim": "sometimes the server and client can be slightly out of sync, and using the next code in the sequence resolves it",
+        "supported": false,
+        "evidence": null
+      }
+    ],
+    "n_claims": 4,
+    "supported": 3,
+    "share_supported": 0.75,
+    "hallucination": true
+  }
+}

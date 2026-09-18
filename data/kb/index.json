@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "kb-0001",
+    "title": "Getting started with Quillstack",
+    "space": "public",
+    "labels": [
+      "getting-started",
+      "workspaces"
+    ],
+    "facts": [
+      "F001",
+      "F002"
+    ],
+    "updated": "2026-06-17",
+    "version": 1
+  },
+  {
+    "id": "kb-0002",
+    "title": "Create your first workspace",
+    "space": "public",
+    "labels": [
+      "getting-started",
+      "workspaces"
+    ],
+    "facts": [
+      "F002",
+      "F046"
+    ],
+    "updated": "2026-09-01",
+    "version": 3
+  },
+  {
+    "id": "kb-0003",
+    "title": "Invite members and assign roles",
+    "space": "public",
+    "labels": [
+      "workspaces",
+      "permissions"
+    ],
+    "facts": [
+      "F046",
+      "F002"
+    ],
+    "updated": "2026-04-19",
+    "version": 2
+  },
+  {
+    "id": "kb-0004",
+    "title": "Quillstack plans compared: Free, Team, and Business",
+    "space": "public",
+    "labels": [
+      "plans",
+      "billing"
+    ],
+    "facts": [
+      "F001",
+      "F002",
+      "F003",
+      "F004",
+      "F006",
+      "F040"
+    ],
+    "updated": "2026-07-15",
+    "version": 3
+  },
+  {
+    "id": "kb-0005",
+    "title": "Create and organize pages",
+    "space": "public",
+    "labels": [
+      "pages"
+    ],
+    "facts": [
+      "F051",
+      "F006"
+    ],
+    "updated": "2026-03-14",
+    "version": 5
+  },
+  {
+    "id": "kb-0006",
+    "title": "Page version history: view and restore earlier versions",
+    "space": "public",
+    "labels": [
+      "pages",
+      "data-retention"
+    ],
+    "facts": [
+      "F054"
+    ],
+    "updated": "2026-04-09",
+    "version": 2
+  },
+  {
+    "id": "kb-0007",
+    "title": "Recover deleted pages from Trash",
+    "space": "public",
+    "labels": [
+      "pages",
+      "data-retention"
+    ],
+    "facts": [
+      "F051"
+    ],
+    "updated": "2026-06-14",
+    "version": 2
+  },
+  {
+    "id": "kb-0008",
+    "title": "Delete or restore a workspace",
+    "space": "public",
+    "labels": [
+      "workspaces",
+      "data-retention"
+    ],
+    "facts": [
+      "F052",
+      "F046"
+    ],
+    "updated": "2026-03-01",
+    "version": 3
+  },
+  {
+    "id": "kb-0009",
+    "title": "File attachments and storage limits",
+    "space": "public",
+    "labels": [
+      "pages",
+      "storage"
+    ],
+    "facts": [
+      "F006"
+    ],
+    "updated": "2026-08-18",
+    "version": 3
+  },
+  {
+    "id": "kb-0010",
+    "title": "Share a page with a public link",
+    "space": "public",
+    "labels": [
+      "pages",
+      "permissions"
+    ],
+    "facts": [
+      "F008"
+    ],
+    "updated": "2026-03-14",
+    "version": 4
+  },
+  {
+    "id": "kb-0011",
+    "title": "Page templates and databases",
+    "space": "public",
+    "labels": [
+      "pages"
+    ],
+    "facts": [
+      "F006",
+      "F008"
+    ],
+    "updated": "2026-09-15",
+    "version": 4
+  },
+  {
+    "id": "kb-0012",
+    "title": "Create a project and add tasks",
+    "space": "public",
+    "labels": [
+      "projects",
+      "tasks"
+    ],
+    "facts": [
+      "F007",
+      "F057"
+    ],
+    "updated": "2026-04-01",
+    "version": 5
+  },
+  {
+    "id": "kb-0013",
+    "title": "Task keys, statuses, and workflows",
+    "space": "public",
+    "labels": [
+      "projects",
+      "tasks"
+    ],
+    "facts": [
+      "F057",
+      "F007"
+    ],
+    "updated": "2026-08-01",
+    "version": 1
+  },
+  {
+    "id": "kb-0014",
+    "title": "Project views: board, list, and timeline",
+    "space": "public",
+    "labels": [
+      "projects"
+    ],
+    "facts": [
+      "F007"
+    ],
+    "updated": "2026-03-04",
+    "version": 5
+  },
+  {
+    "id": "kb-0015",
+    "title": "Archive and restore a project",
+    "space": "public",
+    "labels": [
+      "projects",
+      "data-retention"
+    ],
+    "facts": [
+      "F007"
+    ],
+    "updated": "2026-06-21",
+    "version": 5
+  },
+  {
+    "id": "kb-0016",
+    "title": "Workspace roles explained: Owner, Admin, Editor, Viewer",
+    "space": "public",
+    "labels": [
+      "permissions"
+    ],
+    "facts": [
+      "F046"
+    ],
+    "updated": "2026-03-16",
+    "version": 5
+  },
+  {
+    "id": "kb-0017",
+    "title": "Transfer workspace ownership",
+    "space": "public",
+    "labels": [
+      "permissions",
+      "workspaces"
+    ],
+    "facts": [
+      "F046"
+    ],
+    "updated": "2026-08-10",
+    "version": 2
+  },
+  {
+    "id": "kb-0018",
+    "title": "Change the billing contact",
+    "space": "public",
+    "labels": [
+      "permissions",
+      "billing"
+    ],
+    "facts": [
+      "F046",
+      "F013"
+    ],
+    "updated": "2026-05-01",
+    "version": 4
+  },
+  {
+    "id": "kb-0019",
+    "title": "Reset your password",
+    "space": "public",
+    "labels": [
+      "account",
+      "login"
+    ],
+    "facts": [
+      "F041",
+      "F048"
+    ],
+    "updated": "2026-03-16",
+    "version": 1
+  },
+  {
+    "id": "kb-0020",
+    "title": "Set up two-factor authentication (2FA)",
+    "space": "public",
+    "labels": [
+      "account",
+      "security"
+    ],
+    "facts": [
+      "F042"
+    ],
+    "updated": "2026-05-13",
+    "version": 3
+  },
+  {
+    "id": "kb-0021",
+    "title": "Lost your 2FA device? Sign in with a recovery code",
+    "space": "public",
+    "labels": [
+      "account",
+      "security"
+    ],
+    "facts": [
+      "F042"
+    ],
+    "updated": "2026-09-05",
+    "version": 1
+  },
+  {
+    "id": "kb-0022",
+    "title": "Require 2FA for every workspace member",
+    "space": "public",
+    "labels": [
+      "security",
+      "permissions"
+    ],
+    "facts": [
+      "F045",
+      "F042"
+    ],
+    "updated": "2026-05-03",
+    "version": 5
+  },
+  {
+    "id": "kb-0023",
+    "title": "Account locked after too many sign-in attempts",
+    "space": "public",
+    "labels": [
+      "account",
+      "login"
+    ],
+    "facts": [
+      "F043",
+      "F041"
+    ],
+    "updated": "2026-06-05",
+    "version": 1
+  },
+  {
+    "id": "kb-0024",
+    "title": "Set up SAML single sign-on (Business)",
+    "space": "public",
+    "labels": [
+      "sso",
+      "security"
+    ],
+    "facts": [
+      "F040",
+      "F049"
+    ],
+    "updated": "2026-05-12",
+    "version": 6
+  },
+  {
+    "id": "kb-0025",
+    "title": "Set up OIDC single sign-on (Business)",
+    "space": "public",
+    "labels": [
+      "sso",
+      "security"
+    ],
+    "facts": [
+      "F040"
+    ],
+    "updated": "2026-07-14",
+    "version": 3
+  },
+  {
+    "id": "kb-0026",
+    "title": "Enforce SSO-only sign-in with sso.enforce",
+    "space": "public",
+    "labels": [
+      "sso",
+      "security"
+    ],
+    "facts": [
+      "F049",
+      "F040"
+    ],
+    "updated": "2026-05-07",
+    "version": 1
+  },
+  {
+    "id": "kb-0027",
+    "title": "Sessions: how long you stay signed in and how to sign out everywhere",
+    "space": "public",
+    "labels": [
+      "account",
+      "security"
+    ],
+    "facts": [
+      "F044"
+    ],
+    "updated": "2026-03-26",
+    "version": 1
+  },
+  {
+    "id": "kb-0028",
+    "title": "Change the email address on your account",
+    "space": "public",
+    "labels": [
+      "account"
+    ],
+    "facts": [
+      "F048",
+      "F041"
+    ],
+    "updated": "2026-08-22",
+    "version": 5
+  },
+  {
+    "id": "kb-0029",
+    "title": "Understand your Quillstack invoice",
+    "space": "public",
+    "labels": [
+      "billing",
+      "invoices"
+    ],
+    "facts": [
+      "F013",
+      "F003",
+      "F004"
+    ],
+    "updated": "2026-05-04",
+    "version": 2
+  },
+  {
+    "id": "kb-0030",
+    "title": "Download invoices and receipts",
+    "space": "public",
+    "labels": [
+      "billing",
+      "invoices"
+    ],
+    "facts": [
+      "F013",
+      "F046"
+    ],
+    "updated": "2026-06-17",
+    "version": 5
+  },
+  {
+    "id": "kb-0031",
+    "title": "How proration works when you add or remove seats",
+    "space": "public",
+    "labels": [
+      "billing",
+      "seats"
+    ],
+    "facts": [
+      "F011",
+      "F012"
+    ],
+    "updated": "2026-06-22",
+    "version": 5
+  },
+  {
+    "id": "kb-0032",
+    "title": "Add or remove seats",
+    "space": "public",
+    "labels": [
+      "billing",
+      "seats"
+    ],
+    "facts": [
+      "F011",
+      "F012",
+      "F003",
+      "F004"
+    ],
+    "updated": "2026-07-11",
+    "version": 2
+  },
+  {
+    "id": "kb-0033",
+    "title": "Upgrade or downgrade your plan",
+    "space": "public",
+    "labels": [
+      "billing",
+      "plans"
+    ],
+    "facts": [
+      "F018",
+      "F001"
+    ],
+    "updated": "2026-09-22",
+    "version": 4
+  },
+  {
+    "id": "kb-0034",
+    "title": "I was charged twice: duplicate charges",
+    "space": "public",
+    "labels": [
+      "billing",
+      "refunds"
+    ],
+    "facts": [
+      "F016",
+      "F010"
+    ],
+    "updated": "2026-09-03",
+    "version": 2
+  },
+  {
+    "id": "kb-0035",
+    "title": "Refund policy",
+    "space": "public",
+    "labels": [
+      "billing",
+      "refunds"
+    ],
+    "facts": [
+      "F009",
+      "F010",
+      "F012"
+    ],
+    "updated": "2026-03-25",
+    "version": 1
+  },
+  {
+    "id": "kb-0036",
+    "title": "Failed payments and read-only mode",
+    "space": "public",
+    "labels": [
+      "billing"
+    ],
+    "facts": [
+      "F014",
+      "F015",
+      "F034"
+    ],
+    "updated": "2026-08-03",
+    "version": 2
+  },
+  {
+    "id": "kb-0037",
+    "title": "Update your payment method",
+    "space": "public",
+    "labels": [
+      "billing"
+    ],
+    "facts": [
+      "F017",
+      "F015"
+    ],
+    "updated": "2026-07-23",
+    "version": 1
+  },
+  {
+    "id": "kb-0038",
+    "title": "Monthly versus annual billing",
+    "space": "public",
+    "labels": [
+      "billing",
+      "plans"
+    ],
+    "facts": [
+      "F005",
+      "F003",
+      "F004",
+      "F017"
+    ],
+    "updated": "2026-04-07",
+    "version": 6
+  },
+  {
+    "id": "kb-0039",
+    "title": "Add a VAT or tax ID to your invoices",
+    "space": "public",
+    "labels": [
+      "billing",
+      "invoices"
+    ],
+    "facts": [
+      "F020",
+      "F013"
+    ],
+    "updated": "2026-06-22",
+    "version": 1
+  },
+  {
+    "id": "kb-0040",
+    "title": "Billing currencies",
+    "space": "public",
+    "labels": [
+      "billing"
+    ],
+    "facts": [
+      "F019"
+    ],
+    "updated": "2026-05-26",
+    "version": 1
+  },
+  {
+    "id": "kb-0041",
+    "title": "Cancel your subscription",
+    "space": "public",
+    "labels": [
+      "billing",
+      "plans"
+    ],
+    "facts": [
+      "F018",
+      "F009",
+      "F052"
+    ],
+    "updated": "2026-04-17",
+    "version": 5
+  },
+  {
+    "id": "kb-0042",
+    "title": "Who can support discuss billing with?",
+    "space": "public",
+    "labels": [
+      "billing",
+      "permissions",
+      "security"
+    ],
+    "facts": [
+      "F021",
+      "F046"
+    ],
+    "updated": "2026-04-05",
+    "version": 3
+  },
+  {
+    "id": "kb-0043",
+    "title": "API overview and authentication",
+    "space": "public",
+    "labels": [
+      "api",
+      "keys"
+    ],
+    "facts": [
+      "F028",
+      "F023",
+      "F033"
+    ],
+    "updated": "2026-05-12",
+    "version": 5
+  },
+  {
+    "id": "kb-0044",
+    "title": "Create an API key",
+    "space": "public",
+    "labels": [
+      "api",
+      "keys"
+    ],
+    "facts": [
+      "F023",
+      "F032",
+      "F022"
+    ],
+    "updated": "2026-05-20",
+    "version": 5
+  },
+  {
+    "id": "kb-0045",
+    "title": "Rotate an API key",
+    "space": "public",
+    "labels": [
+      "api",
+      "keys"
+    ],
+    "facts": [
+      "F022",
+      "F023",
+      "F032"
+    ],
+    "updated": "2026-04-23",
+    "version": 5
+  },
+  {
+    "id": "kb-0046",
+    "title": "API key expiry and error QS-1042",
+    "space": "public",
+    "labels": [
+      "api",
+      "keys",
+      "errors"
+    ],
+    "facts": [
+      "F022",
+      "F026",
+      "F027"
+    ],
+    "updated": "2026-07-13",
+    "version": 3
+  },
+  {
+    "id": "kb-0047",
+    "title": "API rate limits",
+    "space": "public",
+    "labels": [
+      "api",
+      "rate-limits"
+    ],
+    "facts": [
+      "F024",
+      "F025"
+    ],
+    "updated": "2026-05-19",
+    "version": 5
+  },
+  {
+    "id": "kb-0048",
+    "title": "Pagination in list endpoints",
+    "space": "public",
+    "labels": [
+      "api",
+      "pagination"
+    ],
+    "facts": [
+      "F029"
+    ],
+    "updated": "2026-08-17",
+    "version": 4
+  },
+  {
+    "id": "kb-0049",
+    "title": "Set up webhooks",
+    "space": "public",
+    "labels": [
+      "api",
+      "webhooks"
+    ],
+    "facts": [
+      "F030",
+      "F039"
+    ],
+    "updated": "2026-09-19",
+    "version": 1
+  },
+  {
+    "id": "kb-0050",
+    "title": "Verify webhook signatures",
+    "space": "public",
+    "labels": [
+      "api",
+      "webhooks",
+      "security"
+    ],
+    "facts": [
+      "F030"
+    ],
+    "updated": "2026-04-06",
+    "version": 4
+  },
+  {
+    "id": "kb-0051",
+    "title": "Webhook retries and disabled endpoints (QS-1061)",
+    "space": "public",
+    "labels": [
+      "api",
+      "webhooks",
+      "errors"
+    ],
+    "facts": [
+      "F031",
+      "F035"
+    ],
+    "updated": "2026-04-21",
+    "version": 3
+  },
+  {
+    "id": "kb-0052",
+    "title": "API error code reference (QS-1001 to QS-1099)",
+    "space": "public",
+    "labels": [
+      "api",
+      "errors"
+    ],
+    "facts": [
+      "F025",
+      "F026",
+      "F027",
+      "F033",
+      "F034",
+      "F035",
+      "F036",
+      "F037"
+    ],
+    "updated": "2026-06-16",
+    "version": 3
+  },
+  {
+    "id": "kb-0053",
+    "title": "Restrict API access by IP address (api.ip_allowlist)",
+    "space": "public",
+    "labels": [
+      "api",
+      "security"
+    ],
+    "facts": [
+      "F038"
+    ],
+    "updated": "2026-05-01",
+    "version": 1
+  },
+  {
+    "id": "kb-0054",
+    "title": "Start and download an export with the API",
+    "space": "public",
+    "labels": [
+      "api",
+      "export"
+    ],
+    "facts": [
+      "F050",
+      "F036"
+    ],
+    "updated": "2026-07-18",
+    "version": 5
+  },
+  {
+    "id": "kb-0055",
+    "title": "Handling QS-1099 internal errors",
+    "space": "public",
+    "labels": [
+      "api",
+      "errors"
+    ],
+    "facts": [
+      "F037"
+    ],
+    "updated": "2026-07-12",
+    "version": 5
+  },
+  {
+    "id": "kb-0056",
+    "title": "Revoke a compromised API key",
+    "space": "public",
+    "labels": [
+      "api",
+      "keys",
+      "security"
+    ],
+    "facts": [
+      "F027",
+      "F023",
+      "F047"
+    ],
+    "updated": "2026-08-19",
+    "version": 2
+  },
+  {
+    "id": "kb-0057",
+    "title": "Connect Slack to Quillstack",
+    "space": "public",
+    "labels": [
+      "integrations",
+      "slack"
+    ],
+    "facts": [
+      "F056"
+    ],
+    "updated": "2026-06-05",
+    "version": 5
+  },
+  {
+    "id": "kb-0058",
+    "title": "Choose which Slack channels receive notifications",
+    "space": "public",
+    "labels": [
+      "integrations",
+      "slack",
+      "notifications"
+    ],
+    "facts": [
+      "F056",
+      "F039"
+    ],
+    "updated": "2026-09-16",
+    "version": 5
+  },
+  {
+    "id": "kb-0059",
+    "title": "Connect GitHub and link pull requests to tasks",
+    "space": "public",
+    "labels": [
+      "integrations",
+      "github"
+    ],
+    "facts": [
+      "F057"
+    ],
+    "updated": "2026-08-08",
+    "version": 1
+  },
+  {
+    "id": "kb-0060",
+    "title": "Troubleshoot GitHub pull requests that do not link to tasks",
+    "space": "public",
+    "labels": [
+      "integrations",
+      "github"
+    ],
+    "facts": [
+      "F057"
+    ],
+    "updated": "2026-07-17",
+    "version": 4
+  },
+  {
+    "id": "kb-0061",
+    "title": "Import from Notion",
+    "space": "public",
+    "labels": [
+      "import"
+    ],
+    "facts": [
+      "F053"
+    ],
+    "updated": "2026-04-23",
+    "version": 4
+  },
+  {
+    "id": "kb-0062",
+    "title": "Import from Confluence",
+    "space": "public",
+    "labels": [
+      "import"
+    ],
+    "facts": [
+      "F053"
+    ],
+    "updated": "2026-07-27",
+    "version": 5
+  },
+  {
+    "id": "kb-0063",
+    "title": "Import Markdown files",
+    "space": "public",
+    "labels": [
+      "import"
+    ],
+    "facts": [
+      "F053"
+    ],
+    "updated": "2026-04-09",
+    "version": 6
+  },
+  {
+    "id": "kb-0064",
+    "title": "Export your workspace",
+    "space": "public",
+    "labels": [
+      "export",
+      "data-retention"
+    ],
+    "facts": [
+      "F050"
+    ],
+    "updated": "2026-04-16",
+    "version": 3
+  },
+  {
+    "id": "kb-0065",
+    "title": "Export is slow or failed with QS-1077",
+    "space": "public",
+    "labels": [
+      "export",
+      "errors"
+    ],
+    "facts": [
+      "F050",
+      "F036"
+    ],
+    "updated": "2026-04-10",
+    "version": 6
+  },
+  {
+    "id": "kb-0066",
+    "title": "Manage email and in-app notifications",
+    "space": "public",
+    "labels": [
+      "notifications"
+    ],
+    "facts": [
+      "F058"
+    ],
+    "updated": "2026-08-15",
+    "version": 1
+  },
+  {
+    "id": "kb-0067",
+    "title": "Email digest settings",
+    "space": "public",
+    "labels": [
+      "notifications"
+    ],
+    "facts": [
+      "F058"
+    ],
+    "updated": "2026-05-16",
+    "version": 4
+  },
+  {
+    "id": "kb-0068",
+    "title": "Quillstack mobile app: requirements and offline mode",
+    "space": "public",
+    "labels": [
+      "mobile"
+    ],
+    "facts": [
+      "F059"
+    ],
+    "updated": "2026-06-05",
+    "version": 5
+  },
+  {
+    "id": "kb-0069",
+    "title": "Mobile app troubleshooting",
+    "space": "public",
+    "labels": [
+      "mobile"
+    ],
+    "facts": [
+      "F059",
+      "F044"
+    ],
+    "updated": "2026-05-18",
+    "version": 5
+  },
+  {
+    "id": "kb-0070",
+    "title": "Data retention and deletion timelines",
+    "space": "public",
+    "labels": [
+      "data-retention",
+      "security"
+    ],
+    "facts": [
+      "F051",
+      "F052",
+      "F054",
+      "F055"
+    ],
+    "updated": "2026-08-14",
+    "version": 2
+  },
+  {
+    "id": "kb-0071",
+    "title": "Audit log (Business)",
+    "space": "public",
+    "labels": [
+      "security",
+      "audit"
+    ],
+    "facts": [
+      "F055"
+    ],
+    "updated": "2026-04-25",
+    "version": 5
+  },
+  {
+    "id": "kb-0072",
+    "title": "Report a security vulnerability",
+    "space": "public",
+    "labels": [
+      "security"
+    ],
+    "facts": [
+      "F047"
+    ],
+    "updated": "2026-09-02",
+    "version": 2
+  },
+  {
+    "id": "kb-0073",
+    "title": "What Quillstack staff can and cannot see in your account",
+    "space": "public",
+    "labels": [
+      "security",
+      "account"
+    ],
+    "facts": [
+      "F048",
+      "F021"
+    ],
+    "updated": "2026-07-13",
+    "version": 5
+  },
+  {
+    "id": "kb-0074",
+    "title": "Contact support and response times",
+    "space": "public",
+    "labels": [
+      "support"
+    ],
+    "facts": [
+      "F060"
+    ],
+    "updated": "2026-05-17",
+    "version": 6
+  },
+  {
+    "id": "kb-0075",
+    "title": "Known issues and workarounds",
+    "space": "public",
+    "labels": [
+      "known-issues"
+    ],
+    "facts": [
+      "F035",
+      "F037",
+      "F059"
+    ],
+    "updated": "2026-06-24",
+    "version": 2
+  },
+  {
+    "id": "kb-0101",
+    "title": "On-call runbook: API outages and QS-1099 spikes",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "runbook",
+      "api"
+    ],
+    "facts": [
+      "F037",
+      "F025",
+      "F024"
+    ],
+    "updated": "2026-09-17",
+    "version": 6
+  },
+  {
+    "id": "kb-0102",
+    "title": "Refund approval policy",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "billing",
+      "refunds"
+    ],
+    "facts": [
+      "F009",
+      "F010",
+      "F016",
+      "F012"
+    ],
+    "updated": "2026-03-13",
+    "version": 3
+  },
+  {
+    "id": "kb-0103",
+    "title": "Admin tools: account lookup and impersonation",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "admin",
+      "security"
+    ],
+    "facts": [
+      "F048",
+      "F021",
+      "F046"
+    ],
+    "updated": "2026-07-01",
+    "version": 6
+  },
+  {
+    "id": "kb-0104",
+    "title": "Escalation matrix",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "escalation",
+      "support"
+    ],
+    "facts": [
+      "F060",
+      "F047",
+      "F010"
+    ],
+    "updated": "2026-07-02",
+    "version": 5
+  },
+  {
+    "id": "kb-0105",
+    "title": "Known-issues register (internal)",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "known-issues",
+      "engineering"
+    ],
+    "facts": [
+      "F035",
+      "F036",
+      "F059",
+      "F057"
+    ],
+    "updated": "2026-09-06",
+    "version": 6
+  },
+  {
+    "id": "kb-0106",
+    "title": "Internal pricing overrides and discounts",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "billing",
+      "pricing"
+    ],
+    "facts": [
+      "F003",
+      "F004",
+      "F005"
+    ],
+    "updated": "2026-09-21",
+    "version": 6
+  },
+  {
+    "id": "kb-0107",
+    "title": "Security incident response playbook",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "security",
+      "runbook"
+    ],
+    "facts": [
+      "F047",
+      "F043",
+      "F027"
+    ],
+    "updated": "2026-03-20",
+    "version": 5
+  },
+  {
+    "id": "kb-0108",
+    "title": "Billing disputes and chargebacks",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "billing"
+    ],
+    "facts": [
+      "F016",
+      "F009",
+      "F021"
+    ],
+    "updated": "2026-04-08",
+    "version": 1
+  },
+  {
+    "id": "kb-0109",
+    "title": "Support macros and reply templates",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "support",
+      "macros"
+    ],
+    "facts": [
+      "F060",
+      "F041",
+      "F026"
+    ],
+    "updated": "2026-07-10",
+    "version": 6
+  },
+  {
+    "id": "kb-0110",
+    "title": "Data deletion requests (GDPR) procedure",
+    "space": "internal",
+    "labels": [
+      "internal",
+      "privacy",
+      "data-retention"
+    ],
+    "facts": [
+      "F051",
+      "F052",
+      "F055"
+    ],
+    "updated": "2026-05-20",
+    "version": 4
+  }
+]

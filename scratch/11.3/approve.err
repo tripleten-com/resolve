@@ -1,0 +1,47 @@
+[mcp_server] helpdesk tools over stdio, target http://localhost:8110
+[09/18/26 00:23:14] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3473.95it/s]
+C:\Users\amish\Documents\TripleTenCourses\resolve\.venv\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:  14%|#3        | 28/202 [00:00<00:00, 269.07it/s]Loading weights:  29%|##9       | 59/202 [00:00<00:00, 286.30it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 956.18it/s]
+[09/18/26 00:23:29] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     HTTP Request: GET                  _client.py:1025
+                             http://localhost:8110/issues?q=2FA                
+                             +code+rejected+not+working                        
+                             "HTTP/1.1 200 OK"                                 
+[09/18/26 00:23:33] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     HTTP Request: GET                  _client.py:1025
+                             http://localhost:8110/issues?q=TOT                
+                             P+authenticator+code+rejected                     
+                             "HTTP/1.1 200 OK"                                 
+[09/18/26 00:23:37] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     HTTP Request: POST                 _client.py:1025
+                             http://localhost:8110/issues                      
+                             "HTTP/1.1 201 Created"                            
+[09/18/26 00:23:43] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     HTTP Request: GET                  _client.py:1025
+                             http://localhost:8110/tickets/T-10                
+                             004 "HTTP/1.1 200 OK"                             
+                    INFO     HTTP Request: POST                 _client.py:1025
+                             http://localhost:8110/tickets/T-10                
+                             004/comments "HTTP/1.1 201                        
+                             Created"                                          
+                    INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     HTTP Request: GET                  _client.py:1025
+                             http://localhost:8110/tickets/T-10                
+                             004 "HTTP/1.1 200 OK"                             
+                    INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+[09/18/26 00:23:44] INFO     HTTP Request: GET                  _client.py:1025
+                             http://localhost:8110/tickets/T-10                
+                             004 "HTTP/1.1 200 OK"                             
+                    INFO     HTTP Request: PATCH                _client.py:1025
+                             http://localhost:8110/tickets/T-10                
+                             004/status "HTTP/1.1 200 OK"                      

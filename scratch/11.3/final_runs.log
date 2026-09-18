@@ -1,0 +1,59 @@
+===== RESET =====
+{"reset":true,"source":"data","tickets":300,"accounts":200,"issues":8}
+===== RUN T-10004 =====
+ticket        T-10004  (2FA code not working)
+input_guard   risk=0.001 flags=['classifier:0.00']
+classify      type=bug urgency=high aimed_at_agent=False confidence=0.92
+specialist    confidence=0.0 citations=[] docs=0 tool_calls=[]
+review        - revision_count=0 reasons=[]
+output_guard  flags=[]
+usage         in=1564 out=91 cost=$0.0020 latency=13040ms
+PAUSED        create_issue: file a bug issue titled '2FA code rejected from authenticator app' for ticket T-10004
+              run: python -m resolve.approve T-10004
+===== APPROVE --yes =====
+
+Pending write for T-10004 (from bug_agent):
+  create_issue: file a bug issue titled '2FA code rejected from authenticator app' for ticket T-10004
+  idempotency key: T-10004:create_issue:52e0a37b
+  -> approved, executing once
+
+Pending write for T-10004 (from escalate):
+  add_ticket_comment: post an internal note on T-10004: 'Resolve escalated this ticket. Reason: output flags: link_stripped:app.quillstack.com,, wrote:create_issue; type bug never auto-resolves Classification: type=bu'...
+  idempotency key: T-10004:add_ticket_comment:80c52e4e
+  -> approved, executing once
+
+Pending write for T-10004 (from escalate):
+  set_ticket_status: set T-10004 to 'escalated'
+  idempotency key: T-10004:set_ticket_status:d04d9502
+  -> approved, executing once
+
+ticket        T-10004  (2FA code not working)
+input_guard   risk=0.001 flags=['classifier:0.00']
+classify      type=bug urgency=high aimed_at_agent=False confidence=0.92
+specialist    confidence=0.75 citations=['kb-0020'] docs=5 tool_calls=['search_kb', 'search_issues', 'read_doc', 'search_issues', 'create_issue', 'add_ticket_comment', 'set_ticket_status']
+review        approve revision_count=0 reasons=[]
+output_guard  flags=['link_stripped:app.quillstack.com,', 'wrote:create_issue']
+usage         in=23818 out=981 cost=$0.0350 latency=42402ms
+DECISION      escalate  output flags: link_stripped:app.quillstack.com,, wrote:create_issue; type bug never auto-resolves
+===== ISSUES for T-10004 =====
+{"issue_id": "ISS-1009", "title": "2FA code rejected from authenticator app", "status": "open", "ticket_id": "T-10004", "idempotency_key": "T-10004:create_issue:52e0a37b"}
+===== TICKET T-10004 =====
+escalated
+resolve True Resolve escalated this ticket. | Reason: output flags: link_stripped:app.quillstack.com,, wrote:create_issue; type bug never auto-resolves | Classification: type=bug urgency=high aimed_at_agent=False confidence=0.92 | Input guard: risk=0.001 flags=['classifier:0.00'] | Output guard: flags=['link_stripped:app.quillstack.com,', 'wrote:create_issue'] | Reviewer: approve; reasons=[]; unsupported=[] | Tool calls: | 
+===== AUDIT after T-10004 =====
+tail: cannot open 'C:/Program Files/Git/app/db/audit.log' for reading: No such file or directory
+===== REPLAY TEST =====
+.                                                                        [100%]
+1 passed, 3 deselected in 72.95s (0:01:12)
+===== AUDIT after replay =====
+tail: cannot open 'C:/Program Files/Git/app/db/audit.log' for reading: No such file or directory
+===== BILLING FOREIGN =====
+classification {'type': 'security', 'urgency': 'high', 'aimed_at_agent': False, 'confidence': 0.92}
+add_ticket_comment   confirmed=False args={"ticket_id": "T-LESSON-BILL1", "body": "Resolve escalated this ticket.\nReason: classify:
+                     -> dry run: not executed
+set_ticket_status    confirmed=False args={"ticket_id": "T-LESSON-BILL1", "status": "escalated"}
+                     -> dry run: not executed
+decision escalate | classify: security ticket (type security, confidence 0.92); no retrieval, no reply drafted
+confidence 0.0 citations []
+draft: 
+usage {'input_tokens': 1592, 'output_tokens': 91, 'cost_usd': 0.002047, 'latency_ms': 23315}

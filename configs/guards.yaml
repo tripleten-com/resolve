@@ -1,0 +1,32 @@
+# Guard thresholds and lists. Set guards_enabled: false ONLY to run the injection suite guards-off.
+guards_enabled: true
+
+injection:
+  # combined score in [0, 1]; the ticket is quarantined and a chunk is dropped at or above this
+  threshold: 0.65
+  # each heuristic hit adds this much; one or two hits alone stay below the threshold,
+  # three or more quarantine even without the classifier (the heuristics-only fallback)
+  heuristic_weight: 0.25
+  heuristic_cap: 0.75
+  # the local classifier's probability of "INJECTION" is scaled by this and added
+  classifier_weight: 0.6
+  classifier_model: protectai/deberta-v3-base-prompt-injection-v2
+  # set false to skip the classifier (heuristics only); also the fallback if the download fails
+  classifier_enabled: true
+
+input:
+  max_chars: 6000
+  # base64 runs at least this long are flagged as encoded
+  base64_min_len: 40
+
+output:
+  # links to any other host are stripped from the draft and flagged
+  allowed_link_hosts:
+    - quillstack.com
+    - app.quillstack.com
+    - help.quillstack.com
+    - api.quillstack.com
+  # a draft shorter than this (characters) fails the schema check
+  min_draft_chars: 40
+  # a draft longer than this fails the schema check (padding costs tokens and reads badly)
+  max_draft_chars: 4000

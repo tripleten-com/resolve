@@ -1,0 +1,23 @@
+{
+  "set": "heldout",
+  "config": {
+    "index": "resolve-kb",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "chunk_max_words": 220,
+    "chunk_overlap_words": 30,
+    "mode": "hybrid",
+    "k": 5,
+    "candidates": 20,
+    "rrf_k": 60
+  },
+  "results": [
+    {
+      "mode": "hybrid",
+      "k": 5,
+      "n": 40,
+      "recall_at_k": 0.95,
+      "mrr": 0.8271,
+      "seconds": 9.8
+    }
+  ]
+}

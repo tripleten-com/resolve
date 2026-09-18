@@ -1,0 +1,5 @@
+292 tickets to generate (8 cached)
+MISSING (rerun to fill): ['T-10110']
+dev 199 Counter({'how_to': 90, 'billing': 50, 'bug': 39, 'security': 20})
+heldout 100 Counter({'how_to': 45, 'billing': 25, 'bug': 20, 'security': 10})
+usage: {'calls': 82, 'prompt_tokens': 432873, 'completion_tokens': 167058, 'cost_usd': 3.805}

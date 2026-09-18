@@ -1,0 +1,33 @@
+# Models, thresholds, and caps the graph reads at runtime.
+# Model names come from .env (LLM_MODEL, LLM_MODEL_REVIEW); these entries say which one each node uses.
+models:
+  classify: LLM_MODEL          # one structured call
+  specialists: LLM_MODEL       # knowledge_agent, billing_agent, bug_agent
+  review: LLM_MODEL_REVIEW     # the stronger model, no tools
+
+# route: auto_resolve only if review approved, confidence >= threshold, no output flags, type in how_to/billing
+confidence_threshold: 0.7
+
+# the shared tool-calling loop stops after this many model turns and hands off with low confidence
+max_steps: 6
+
+# review may send a draft back this many times; the next revise verdict ends the loop
+revision_limit: 1
+
+# max_tokens per call, kept short to bound spend
+max_tokens:
+  classify: 200
+  specialist: 900
+  review: 500
+
+# input_guard: tickets longer than this (characters) are truncated and flagged
+ticket_max_chars: 6000
+
+# where SqliteSaver keeps checkpoints (gitignored); thread_id is the ticket id
+checkpoint_path: var/checkpoints.db
+
+# USD per million tokens, used when the provider does not report cost itself
+pricing:
+  anthropic/claude-haiku-4.5: {input: 1.0, output: 5.0}
+  anthropic/claude-sonnet-4.5: {input: 3.0, output: 15.0}
+  default: {input: 1.0, output: 5.0}

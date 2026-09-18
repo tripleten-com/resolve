@@ -1,0 +1,194 @@
+{
+  "ticket_id": "T-10001",
+  "ticket_type": "how_to",
+  "note": "Local trace export (no LangSmith key in the reference build): the node sequence from the SqliteSaver checkpoint history and the checkpointed final state.",
+  "node_sequence": [
+    "__start__",
+    "input_guard",
+    "classify",
+    "knowledge_agent",
+    "review",
+    "knowledge_agent",
+    "review",
+    "output_guard",
+    "route",
+    "resolve"
+  ],
+  "state": {
+    "ticket_id": "T-10001",
+    "ticket": {
+      "subject": "how do i archive a project?",
+      "body": "Hi team,\n\nwe have a project thats finished and i want to archive it but cant find the option anywhere. also can we bringit back later if we need to? im an admin on the workspace sojust want to make sure i do this right. the project has alot of tasks in it maybe 4000 or so and its slowing things down when we look at the list.\n\nthanks\nHanna",
+      "customer_email": "hrahman@greenlightops.com",
+      "plan": "Team",
+      "created_at": "2026-08-01T09:00:50Z",
+      "channel": "email"
+    },
+    "guard_input": {
+      "flags": [
+        "classifier:0.00"
+      ],
+      "risk": 0.0,
+      "quarantined": false
+    },
+    "classification": {
+      "type": "how_to",
+      "urgency": "normal",
+      "aimed_at_agent": false,
+      "confidence": 0.95
+    },
+    "docs": [
+      {
+        "doc_id": "kb-0015",
+        "chunk_id": "kb-0015#00",
+        "title": "Archive and restore a project",
+        "heading": "",
+        "space": "public",
+        "text": "Archive and restore a project\n\nArchiving a project removes it from your active workspace without deleting any data. Archived projects are read-only, so no one can create, edit, or delete tasks, but you can view the project and its tasks at any time. If you need to resume work, an Admin or Owner can restore the project in a few clicks.",
+        "score": 0.032018442622950824
+      },
+      {
+        "doc_id": "kb-0015",
+        "chunk_id": "kb-0015#03",
+        "title": "Archive and restore a project",
+        "heading": "Archive a project",
+        "space": "public",
+        "text": "Archive and restore a project > Archive a project\n\n1. Go to Projects and open the project you want to archive.\n2. Click Settings > Archive project.\n3. Confirm the action in the dialog.\n4. The project disappears from the active project list and moves to Projects > Archived.\n\nOnce archived, the project is read-only. No one can create, edit, or delete tasks, and the project does not appear in the main project list or workspace search by default.",
+        "score": 0.032018442622950824
+      },
+      {
+        "doc_id": "kb-0015",
+        "chunk_id": "kb-0015#02",
+        "title": "Archive and restore a project",
+        "heading": "When to archive a project",
+        "space": "public",
+        "text": "Archive and restore a project > When to archive a project\n\nArchive a project when the work is complete or on hold and you do not expect to create new tasks. Common reasons include:\n\n- The project delivered and the team has moved on.\n- The project was exploratory and you decided not to continue.\n- You want to reduce clutter in the active project list.\n- The project reached the 5,000 open task limit and you need to start fresh.\n\nArchiving is not the same as deleting. Archived projects stay in your workspace indefinitely and can be restored at any time.",
+        "score": 0.03200204813108039
+      },
+      {
+        "doc_id": "kb-0015",
+        "chunk_id": "kb-0015#01",
+        "title": "Archive and restore a project",
+        "heading": "Before you start",
+        "space": "public",
+        "text": "Archive and restore a project > Before you start\n\nYou need Admin or Owner permissions to archive or restore a project. Archived projects do not count toward any plan limits, and their tasks do not appear in workspace search or the global task list unless you explicitly filter for archived projects.",
+        "score": 0.031054405392392875
+      },
+      {
+        "doc_id": "kb-0015",
+        "chunk_id": "kb-0015#06",
+        "title": "Archive and restore a project",
+        "heading": "Troubleshooting",
+        "space": "public",
+        "text": "Archive and restore a project > Troubleshooting\n\n**I cannot find the Archive project button.** You need Admin or Owner permissions to archive a project. Editors and Viewers cannot archive or restore projects.\n\n**The project is archived but I need to edit a task.** Archived projects are read-only. Restore the project first, make your changes, then archive it again if needed.\n\n**I archived a project by mistake.** Go to Projects > Archived, find the project, and click Restore. The project returns to the active list immediately.\n\n**Can I export an archived project?** Yes. Workspace exports include both active and archived projects. Start an export from Settings > Export and the resulting .zip file will contain all projects.",
+        "score": 0.030798389007344232
+      },
+      {
+        "doc_id": "kb-0015",
+        "chunk_id": "kb-0015#04",
+        "title": "Archive and restore a project",
+        "heading": "Restore an archived project",
+        "space": "public",
+        "text": "Archive and restore a project > Restore an archived project\n\n1. Go to Projects > Archived.\n2. Find the project you want to restore.\n3. Click the three-dot menu next to the project name and select Restore.\n4. The project returns to the active project list and becomes fully editable again.\n\nOnly an Admin or Owner can restore a project. After restoration, all tasks, comments, attachments, and history are intact.",
+        "score": 0.03177805800756621
+      }
+    ],
+    "draft": "Hi,\n\nGreat question! Here's how to archive your finished project:\n\n1. Go to Projects and open the project you want to archive.\n2. Click Settings > Archive project.\n3. Confirm the action in the dialog.\n4. The project disappears from the active project list and moves to Projects > Archived.\n\nOnce archived, the project becomes read-only\u2014no one can create, edit, or delete tasks\u2014but you can view the project and its tasks anytime.\n\nTo bring it back later: Go to Projects > Archived, find the project, click the three-dot menu next to the project name, and select Restore. The project returns to the active list with all tasks, comments, attachments, and history intact.\n\nOne note: You'll need Admin or Owner permissions to archive or restore a project. If you have those permissions, you're all set to proceed.\n\nLet us know if you hit any snags!\n\nQuillstack Support",
+    "citations": [
+      "kb-0015"
+    ],
+    "confidence": 0.92,
+    "tool_calls": [
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "archive project"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0015#00\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", \"heading\": \"\", \"space\": \"public\", \"text\": \"Archive and restore a project\\n\\nArchiving a project removes it from your active workspace without deleting any data. Archived projects are read-only, so no one can create, edit, or delete tasks, but you can view the project and its tasks at any time. If you need to resume work, an Admin or Owner can restore the project in a few clicks.\", \"score\": 0.032018442622950824}, {\"chunk_id\": \"kb-0015#03\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", ...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "unarchive restore project"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0015#00\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", \"heading\": \"\", \"space\": \"public\", \"text\": \"Archive and restore a project\\n\\nArchiving a project removes it from your active workspace without deleting any data. Archived projects are read-only, so no one can create, edit, or delete tasks, but you can view the project and its tasks at any time. If you need to resume work, an Admin or Owner can restore the project in a few clicks.\", \"score\": 0.03252247488101534}, {\"chunk_id\": \"kb-0015#04\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", \"...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "archive project"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0015#00\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", \"heading\": \"\", \"space\": \"public\", \"text\": \"Archive and restore a project\\n\\nArchiving a project removes it from your active workspace without deleting any data. Archived projects are read-only, so no one can create, edit, or delete tasks, but you can view the project and its tasks at any time. If you need to resume work, an Admin or Owner can restore the project in a few clicks.\", \"score\": 0.032018442622950824}, {\"chunk_id\": \"kb-0015#03\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", ...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "search_kb",
+        "args": {
+          "query": "restore unarchive project"
+        },
+        "result_summary": "[{\"chunk_id\": \"kb-0015#00\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", \"heading\": \"\", \"space\": \"public\", \"text\": \"Archive and restore a project\\n\\nArchiving a project removes it from your active workspace without deleting any data. Archived projects are read-only, so no one can create, edit, or delete tasks, but you can view the project and its tasks at any time. If you need to resume work, an Admin or Owner can restore the project in a few clicks.\", \"score\": 0.032266458495966696}, {\"chunk_id\": \"kb-0015#04\", \"doc_id\": \"kb-0015\", \"title\": \"Archive and restore a project\", ...",
+        "confirmed": true,
+        "idempotency_key": null,
+        "write": false,
+        "node": "knowledge_agent"
+      },
+      {
+        "name": "add_ticket_comment",
+        "args": {
+          "ticket_id": "T-10001",
+          "body": "Hi,\n\nGreat question! Here's how to archive your finished project:\n\n1. Go to Projects and open the project you want to archive.\n2. Click Settings > Archive project.\n3. Confirm the action in the dialog.\n4. The project disappears from the active project list and moves to Projects > Archived.\n\nOnce archived, the project becomes read-only\u2014no one can create, edit, or delete tasks\u2014but you can view the project and its tasks anytime.\n\nTo bring it back later: Go to Projects > Archived, find the project, click the three-dot menu next to the project name, and select Restore. The project returns to the active list with all tasks, comments, attachments, and history intact.\n\nOne note: You'll need Admin or Owner permissions to archive or restore a project. If you have those permissions, you're all set to proceed.\n\nLet us know if you hit any snags!\n\nQuillstack Support",
+          "internal": false
+        },
+        "idempotency_key": "T-10001:add_ticket_comment:cc4ccb1b",
+        "write": true,
+        "node": "resolve",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"comment_id\\\": 1,\\n \\\"ticket_id\\\": \\\"T-10001\\\",\\n \\\"internal\\\": false,\\n \\\"created\\\": true,\\n \\\"idempotency_key\\\": \\\"T-10001:add_ticket_comment:cc4ccb1b\\\"\\n}\", \"id\": \"lc_a8e4987c-f480-475c-b77b-79dae2e10c5e\"}]"
+      },
+      {
+        "name": "set_ticket_status",
+        "args": {
+          "ticket_id": "T-10001",
+          "status": "resolved"
+        },
+        "idempotency_key": "T-10001:set_ticket_status:86b1d0a2",
+        "write": true,
+        "node": "resolve",
+        "confirmed": true,
+        "attempted": true,
+        "result_summary": "[{\"type\": \"text\", \"text\": \"{\\n \\\"ticket_id\\\": \\\"T-10001\\\",\\n \\\"status\\\": \\\"resolved\\\",\\n \\\"changed\\\": true,\\n \\\"idempotency_key\\\": \\\"T-10001:set_ticket_status:86b1d0a2\\\"\\n}\", \"id\": \"lc_9e00fbaa-cb1a-4bc8-b282-bba9d1db4ff4\"}]"
+      }
+    ],
+    "pending_write": null,
+    "review": {
+      "verdict": "approve",
+      "reasons": [],
+      "unsupported_claims": [],
+      "revision_count": 1
+    },
+    "guard_output": {
+      "flags": [],
+      "ok": true
+    },
+    "decision": "auto_resolve",
+    "escalation_reason": "",
+    "usage": {
+      "input_tokens": 16310,
+      "output_tokens": 1175,
+      "cost_usd": 0.033635,
+      "latency_ms": 29911
+    }
+  }
+}

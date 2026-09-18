@@ -1,0 +1,1096 @@
+[
+ {
+  "query": "how do I sign up and start using quillstack",
+  "gold_doc_ids": [
+   "kb-0001"
+  ],
+  "source": "kb-0001"
+ },
+ {
+  "query": "free plan how many users and workspaces allowed",
+  "gold_doc_ids": [
+   "kb-0001"
+  ],
+  "source": "kb-0001"
+ },
+ {
+  "query": "how to set up a new workspace",
+  "gold_doc_ids": [
+   "kb-0002"
+  ],
+  "source": "kb-0002"
+ },
+ {
+  "query": "who can delete a workspace or transfer ownership",
+  "gold_doc_ids": [
+   "kb-0002"
+  ],
+  "source": "kb-0002"
+ },
+ {
+  "query": "how to add team members to my workspace",
+  "gold_doc_ids": [
+   "kb-0003",
+   "kb-0016"
+  ],
+  "source": "kb-0003"
+ },
+ {
+  "query": "what are the different user roles and permissions",
+  "gold_doc_ids": [
+   "kb-0003"
+  ],
+  "source": "kb-0003"
+ },
+ {
+  "query": "what is the difference between free team and business plans",
+  "gold_doc_ids": [
+   "kb-0004",
+   "kb-0033"
+  ],
+  "source": "kb-0004"
+ },
+ {
+  "query": "how much does team plan cost per month",
+  "gold_doc_ids": [
+   "kb-0004"
+  ],
+  "source": "kb-0004"
+ },
+ {
+  "query": "how do I create and structure documentation pages",
+  "gold_doc_ids": [
+   "kb-0005"
+  ],
+  "source": "kb-0005"
+ },
+ {
+  "query": "can I recover a page I deleted last week",
+  "gold_doc_ids": [
+   "kb-0005"
+  ],
+  "source": "kb-0005"
+ },
+ {
+  "query": "how long are old versions of pages saved",
+  "gold_doc_ids": [
+   "kb-0006",
+   "kb-0007"
+  ],
+  "source": "kb-0006"
+ },
+ {
+  "query": "version history retention period by plan",
+  "gold_doc_ids": [
+   "kb-0006"
+  ],
+  "source": "kb-0006"
+ },
+ {
+  "query": "restore a page from trash",
+  "gold_doc_ids": [
+   "kb-0007",
+   "kb-0006"
+  ],
+  "source": "kb-0007"
+ },
+ {
+  "query": "pages deleted more than 30 days ago",
+  "gold_doc_ids": [
+   "kb-0007"
+  ],
+  "source": "kb-0007"
+ },
+ {
+  "query": "I accidentally deleted my workspace can I get it back",
+  "gold_doc_ids": [
+   "kb-0008"
+  ],
+  "source": "kb-0008"
+ },
+ {
+  "query": "settings workspaces deleted menu",
+  "gold_doc_ids": [
+   "kb-0008"
+  ],
+  "source": "kb-0008"
+ },
+ {
+  "query": "how much storage space do I get for uploads",
+  "gold_doc_ids": [
+   "kb-0009"
+  ],
+  "source": "kb-0009"
+ },
+ {
+  "query": "maximum file size for attachments",
+  "gold_doc_ids": [
+   "kb-0009"
+  ],
+  "source": "kb-0009"
+ },
+ {
+  "query": "can I share a page with someone outside my workspace",
+  "gold_doc_ids": [
+   "kb-0010"
+  ],
+  "source": "kb-0010"
+ },
+ {
+  "query": "anyone with the link not available on my plan",
+  "gold_doc_ids": [
+   "kb-0010"
+  ],
+  "source": "kb-0010"
+ },
+ {
+  "query": "how to create reusable templates for pages",
+  "gold_doc_ids": [
+   "kb-0011"
+  ],
+  "source": "kb-0011"
+ },
+ {
+  "query": "share anyone with the link option missing",
+  "gold_doc_ids": [
+   "kb-0011"
+  ],
+  "source": "kb-0011"
+ },
+ {
+  "query": "how do I set up a project with tasks",
+  "gold_doc_ids": [
+   "kb-0012"
+  ],
+  "source": "kb-0012"
+ },
+ {
+  "query": "link github pull request to task automatically",
+  "gold_doc_ids": [
+   "kb-0012"
+  ],
+  "source": "kb-0012"
+ },
+ {
+  "query": "what is a task key and how does it work",
+  "gold_doc_ids": [
+   "kb-0013"
+  ],
+  "source": "kb-0013"
+ },
+ {
+  "query": "projectkey-number format in branch name",
+  "gold_doc_ids": [
+   "kb-0013"
+  ],
+  "source": "kb-0013"
+ },
+ {
+  "query": "switch between board list and timeline views",
+  "gold_doc_ids": [
+   "kb-0014"
+  ],
+  "source": "kb-0014"
+ },
+ {
+  "query": "project hit the 5000 task limit",
+  "gold_doc_ids": [
+   "kb-0014"
+  ],
+  "source": "kb-0014"
+ },
+ {
+  "query": "how to archive a project and bring it back later",
+  "gold_doc_ids": [
+   "kb-0015"
+  ],
+  "source": "kb-0015"
+ },
+ {
+  "query": "projects archived where to find them",
+  "gold_doc_ids": [
+   "kb-0015"
+  ],
+  "source": "kb-0015"
+ },
+ {
+  "query": "what can admins do versus owners in a workspace",
+  "gold_doc_ids": [
+   "kb-0016"
+  ],
+  "source": "kb-0016"
+ },
+ {
+  "query": "who can delete workspace or change billing contact",
+  "gold_doc_ids": [
+   "kb-0016"
+  ],
+  "source": "kb-0016"
+ },
+ {
+  "query": "how do I transfer ownership of my workspace to another person",
+  "gold_doc_ids": [
+   "kb-0017"
+  ],
+  "source": "kb-0017"
+ },
+ {
+  "query": "make someone else the owner of the workspace",
+  "gold_doc_ids": [
+   "kb-0017"
+  ],
+  "source": "kb-0017"
+ },
+ {
+  "query": "update the billing contact for invoices",
+  "gold_doc_ids": [
+   "kb-0018"
+  ],
+  "source": "kb-0018"
+ },
+ {
+  "query": "invoices going to wrong email address",
+  "gold_doc_ids": [
+   "kb-0018"
+  ],
+  "source": "kb-0018"
+ },
+ {
+  "query": "forgot my password how do I get back in",
+  "gold_doc_ids": [
+   "kb-0019"
+  ],
+  "source": "kb-0019"
+ },
+ {
+  "query": "password reset link not working anymore",
+  "gold_doc_ids": [
+   "kb-0019"
+  ],
+  "source": "kb-0019"
+ },
+ {
+  "query": "how do I turn on two factor authentication",
+  "gold_doc_ids": [
+   "kb-0020",
+   "kb-0021"
+  ],
+  "source": "kb-0020"
+ },
+ {
+  "query": "where are my 2fa recovery codes",
+  "gold_doc_ids": [
+   "kb-0020",
+   "kb-0021"
+  ],
+  "source": "kb-0020"
+ },
+ {
+  "query": "lost my phone with authenticator app can't sign in",
+  "gold_doc_ids": [
+   "kb-0020",
+   "kb-0021"
+  ],
+  "source": "kb-0021"
+ },
+ {
+  "query": "use recovery code to log in without 2fa device",
+  "gold_doc_ids": [
+   "kb-0020",
+   "kb-0021"
+  ],
+  "source": "kb-0021"
+ },
+ {
+  "query": "force all team members to use two factor auth",
+  "gold_doc_ids": [
+   "kb-0022"
+  ],
+  "source": "kb-0022"
+ },
+ {
+  "query": "require 2fa setting in security options",
+  "gold_doc_ids": [
+   "kb-0022"
+  ],
+  "source": "kb-0022"
+ },
+ {
+  "query": "can't sign in says account is locked",
+  "gold_doc_ids": [
+   "kb-0023"
+  ],
+  "source": "kb-0023"
+ },
+ {
+  "query": "locked out after wrong password too many times",
+  "gold_doc_ids": [
+   "kb-0023"
+  ],
+  "source": "kb-0023"
+ },
+ {
+  "query": "configure saml single sign on with our identity provider",
+  "gold_doc_ids": [
+   "kb-0024",
+   "kb-0025"
+  ],
+  "source": "kb-0024"
+ },
+ {
+  "query": "sso.entity_id and acs url for saml setup",
+  "gold_doc_ids": [
+   "kb-0024",
+   "kb-0025"
+  ],
+  "source": "kb-0024"
+ },
+ {
+  "query": "set up oidc single sign on for business plan",
+  "gold_doc_ids": [
+   "kb-0024",
+   "kb-0025"
+  ],
+  "source": "kb-0025"
+ },
+ {
+  "query": "difference between saml and oidc sso options",
+  "gold_doc_ids": [
+   "kb-0024",
+   "kb-0025"
+  ],
+  "source": "kb-0025"
+ },
+ {
+  "query": "block password login and require sso for everyone",
+  "gold_doc_ids": [
+   "kb-0026"
+  ],
+  "source": "kb-0026"
+ },
+ {
+  "query": "sso.enforce setting to disable password sign in",
+  "gold_doc_ids": [
+   "kb-0026"
+  ],
+  "source": "kb-0026"
+ },
+ {
+  "query": "how long before I'm logged out automatically",
+  "gold_doc_ids": [
+   "kb-0027"
+  ],
+  "source": "kb-0027"
+ },
+ {
+  "query": "sign out of all devices at once",
+  "gold_doc_ids": [
+   "kb-0027"
+  ],
+  "source": "kb-0027"
+ },
+ {
+  "query": "update my email address for my account",
+  "gold_doc_ids": [
+   "kb-0028"
+  ],
+  "source": "kb-0028"
+ },
+ {
+  "query": "change login email to new work address",
+  "gold_doc_ids": [
+   "kb-0028"
+  ],
+  "source": "kb-0028"
+ },
+ {
+  "query": "what do the line items on my invoice mean",
+  "gold_doc_ids": [
+   "kb-0029",
+   "kb-0030"
+  ],
+  "source": "kb-0029"
+ },
+ {
+  "query": "inv-202608-00417 invoice number format explanation",
+  "gold_doc_ids": [
+   "kb-0029",
+   "kb-0030"
+  ],
+  "source": "kb-0029"
+ },
+ {
+  "query": "where can I download past invoices and receipts",
+  "gold_doc_ids": [
+   "kb-0029",
+   "kb-0030"
+  ],
+  "source": "kb-0030"
+ },
+ {
+  "query": "need pdf copy of invoice for accounting",
+  "gold_doc_ids": [
+   "kb-0029",
+   "kb-0030"
+  ],
+  "source": "kb-0030"
+ },
+ {
+  "query": "how does billing work when I add someone to my team mid month",
+  "gold_doc_ids": [
+   "kb-0031",
+   "kb-0032"
+  ],
+  "source": "kb-0031"
+ },
+ {
+  "query": "charged for full month but only added user for 10 days",
+  "gold_doc_ids": [
+   "kb-0031",
+   "kb-0032"
+  ],
+  "source": "kb-0031"
+ },
+ {
+  "query": "how do I add or remove seats from my subscription",
+  "gold_doc_ids": [
+   "kb-0031",
+   "kb-0032"
+  ],
+  "source": "kb-0032"
+ },
+ {
+  "query": "refund for removed seat not showing up",
+  "gold_doc_ids": [
+   "kb-0031",
+   "kb-0032"
+  ],
+  "source": "kb-0032"
+ },
+ {
+  "query": "how do I switch from team to business plan",
+  "gold_doc_ids": [
+   "kb-0033",
+   "kb-0004"
+  ],
+  "source": "kb-0033"
+ },
+ {
+  "query": "downgrade takes effect immediately or next cycle",
+  "gold_doc_ids": [
+   "kb-0033"
+  ],
+  "source": "kb-0033"
+ },
+ {
+  "query": "I was charged the same amount two times today",
+  "gold_doc_ids": [
+   "kb-0034"
+  ],
+  "source": "kb-0034"
+ },
+ {
+  "query": "duplicate payment on my credit card statement",
+  "gold_doc_ids": [
+   "kb-0034"
+  ],
+  "source": "kb-0034"
+ },
+ {
+  "query": "how do I get my money back from quillstack",
+  "gold_doc_ids": [
+   "kb-0035"
+  ],
+  "source": "kb-0035"
+ },
+ {
+  "query": "refund deadline after being charged",
+  "gold_doc_ids": [
+   "kb-0035"
+  ],
+  "source": "kb-0035"
+ },
+ {
+  "query": "workspace is read only after payment didn't go through",
+  "gold_doc_ids": [
+   "kb-0036"
+  ],
+  "source": "kb-0036"
+ },
+ {
+  "query": "QS-1050 when trying to edit a page",
+  "gold_doc_ids": [
+   "kb-0036"
+  ],
+  "source": "kb-0036"
+ },
+ {
+  "query": "how do I change my credit card on file",
+  "gold_doc_ids": [
+   "kb-0036",
+   "kb-0037"
+  ],
+  "source": "kb-0037"
+ },
+ {
+  "query": "does quillstack accept amex or only visa",
+  "gold_doc_ids": [
+   "kb-0037"
+  ],
+  "source": "kb-0037"
+ },
+ {
+  "query": "how much does annual subscription cost versus monthly",
+  "gold_doc_ids": [
+   "kb-0038"
+  ],
+  "source": "kb-0038"
+ },
+ {
+  "query": "can I pay by wire transfer instead of card",
+  "gold_doc_ids": [
+   "kb-0038"
+  ],
+  "source": "kb-0038"
+ },
+ {
+  "query": "how do I add my vat number to invoices",
+  "gold_doc_ids": [
+   "kb-0039"
+  ],
+  "source": "kb-0039"
+ },
+ {
+  "query": "tax id not showing on old invoice",
+  "gold_doc_ids": [
+   "kb-0039"
+  ],
+  "source": "kb-0039"
+ },
+ {
+  "query": "can I change my billing currency after signup",
+  "gold_doc_ids": [
+   "kb-0040"
+  ],
+  "source": "kb-0040"
+ },
+ {
+  "query": "what currencies does quillstack support for payment",
+  "gold_doc_ids": [
+   "kb-0040"
+  ],
+  "source": "kb-0040"
+ },
+ {
+  "query": "how do I cancel my quillstack subscription",
+  "gold_doc_ids": [
+   "kb-0041"
+  ],
+  "source": "kb-0041"
+ },
+ {
+  "query": "cancellation refund if I just paid yesterday",
+  "gold_doc_ids": [
+   "kb-0041"
+  ],
+  "source": "kb-0041"
+ },
+ {
+  "query": "support won't tell me about billing for my company workspace",
+  "gold_doc_ids": [
+   "kb-0042"
+  ],
+  "source": "kb-0042"
+ },
+ {
+  "query": "what roles can see billing details and invoices",
+  "gold_doc_ids": [
+   "kb-0042"
+  ],
+  "source": "kb-0042"
+ },
+ {
+  "query": "how do I authenticate api requests to quillstack",
+  "gold_doc_ids": [
+   "kb-0043"
+  ],
+  "source": "kb-0043"
+ },
+ {
+  "query": "QS-1007 invalid field in api call",
+  "gold_doc_ids": [
+   "kb-0043"
+  ],
+  "source": "kb-0043"
+ },
+ {
+  "query": "how do I create a new api key for my workspace",
+  "gold_doc_ids": [
+   "kb-0044",
+   "kb-0045"
+  ],
+  "source": "kb-0044"
+ },
+ {
+  "query": "how many api keys can I have on team plan",
+  "gold_doc_ids": [
+   "kb-0044",
+   "kb-0045"
+  ],
+  "source": "kb-0044"
+ },
+ {
+  "query": "my api key is about to expire what do I do",
+  "gold_doc_ids": [
+   "kb-0044",
+   "kb-0045"
+  ],
+  "source": "kb-0045"
+ },
+ {
+  "query": "token stopped working after 30 days",
+  "gold_doc_ids": [
+   "kb-0045",
+   "kb-0046"
+  ],
+  "source": "kb-0045"
+ },
+ {
+  "query": "my api token stopped working after a month",
+  "gold_doc_ids": [
+   "kb-0046"
+  ],
+  "source": "kb-0046"
+ },
+ {
+  "query": "QS-1042",
+  "gold_doc_ids": [
+   "kb-0046",
+   "kb-0052"
+  ],
+  "source": "kb-0046"
+ },
+ {
+  "query": "getting too many requests error from the api",
+  "gold_doc_ids": [
+   "kb-0047"
+  ],
+  "source": "kb-0047"
+ },
+ {
+  "query": "QS-1029",
+  "gold_doc_ids": [
+   "kb-0047",
+   "kb-0052"
+  ],
+  "source": "kb-0047"
+ },
+ {
+  "query": "how many results can I get from a list api call",
+  "gold_doc_ids": [
+   "kb-0048"
+  ],
+  "source": "kb-0048"
+ },
+ {
+  "query": "next_cursor is null what does that mean",
+  "gold_doc_ids": [
+   "kb-0048"
+  ],
+  "source": "kb-0048"
+ },
+ {
+  "query": "how do I receive real-time updates when pages are created",
+  "gold_doc_ids": [
+   "kb-0049"
+  ],
+  "source": "kb-0049"
+ },
+ {
+  "query": "X-Quillstack-Signature header",
+  "gold_doc_ids": [
+   "kb-0049",
+   "kb-0050"
+  ],
+  "source": "kb-0049"
+ },
+ {
+  "query": "verify the webhook payload is really from quillstack",
+  "gold_doc_ids": [
+   "kb-0050"
+  ],
+  "source": "kb-0050"
+ },
+ {
+  "query": "whsec_ signing secret hmac",
+  "gold_doc_ids": [
+   "kb-0050",
+   "kb-0051"
+  ],
+  "source": "kb-0050"
+ },
+ {
+  "query": "webhook endpoint stopped receiving events automatically",
+  "gold_doc_ids": [
+   "kb-0051"
+  ],
+  "source": "kb-0051"
+ },
+ {
+  "query": "QS-1061",
+  "gold_doc_ids": [
+   "kb-0051",
+   "kb-0052"
+  ],
+  "source": "kb-0051"
+ },
+ {
+  "query": "what does error code QS-1007 mean",
+  "gold_doc_ids": [
+   "kb-0052"
+  ],
+  "source": "kb-0052"
+ },
+ {
+  "query": "QS-1050 read-only mode",
+  "gold_doc_ids": [
+   "kb-0052"
+  ],
+  "source": "kb-0052"
+ },
+ {
+  "query": "only allow api requests from our office ip address",
+  "gold_doc_ids": [
+   "kb-0053"
+  ],
+  "source": "kb-0053"
+ },
+ {
+  "query": "api.ip_allowlist setting",
+  "gold_doc_ids": [
+   "kb-0053"
+  ],
+  "source": "kb-0053"
+ },
+ {
+  "query": "download all our workspace content as a backup",
+  "gold_doc_ids": [
+   "kb-0054"
+  ],
+  "source": "kb-0054"
+ },
+ {
+  "query": "QS-1077 export failed",
+  "gold_doc_ids": [
+   "kb-0054",
+   "kb-0052"
+  ],
+  "source": "kb-0054"
+ },
+ {
+  "query": "api returned internal server error should I retry",
+  "gold_doc_ids": [
+   "kb-0055"
+  ],
+  "source": "kb-0055"
+ },
+ {
+  "query": "QS-1099 request_id",
+  "gold_doc_ids": [
+   "kb-0055",
+   "kb-0052"
+  ],
+  "source": "kb-0055"
+ },
+ {
+  "query": "accidentally committed api key to github need to disable it",
+  "gold_doc_ids": [
+   "kb-0056"
+  ],
+  "source": "kb-0056"
+ },
+ {
+  "query": "QS-1041 invalid or revoked",
+  "gold_doc_ids": [
+   "kb-0056",
+   "kb-0052"
+  ],
+  "source": "kb-0056"
+ },
+ {
+  "query": "send page updates to a slack channel automatically",
+  "gold_doc_ids": [
+   "kb-0057"
+  ],
+  "source": "kb-0057"
+ },
+ {
+  "query": "slack.default_channel configuration",
+  "gold_doc_ids": [
+   "kb-0057",
+   "kb-0058"
+  ],
+  "source": "kb-0057"
+ },
+ {
+  "query": "stop notifications going to the wrong slack channel",
+  "gold_doc_ids": [
+   "kb-0058"
+  ],
+  "source": "kb-0058"
+ },
+ {
+  "query": "page.created task.completed event types",
+  "gold_doc_ids": [
+   "kb-0058"
+  ],
+  "source": "kb-0058"
+ },
+ {
+  "query": "automatically show pull request on the task page",
+  "gold_doc_ids": [
+   "kb-0059"
+  ],
+  "source": "kb-0059"
+ },
+ {
+  "query": "PROJECTKEY-NUMBER in PR title or branch",
+  "gold_doc_ids": [
+   "kb-0059",
+   "kb-0060"
+  ],
+  "source": "kb-0059"
+ },
+ {
+  "query": "github pr not showing up on my task",
+  "gold_doc_ids": [
+   "kb-0060"
+  ],
+  "source": "kb-0060"
+ },
+ {
+  "query": "task key DOCS-142 format",
+  "gold_doc_ids": [
+   "kb-0060",
+   "kb-0059"
+  ],
+  "source": "kb-0060"
+ },
+ {
+  "query": "how do I migrate my documentation from Notion to Quillstack",
+  "gold_doc_ids": [
+   "kb-0061"
+  ],
+  "source": "kb-0061"
+ },
+ {
+  "query": "import from notion file size limit",
+  "gold_doc_ids": [
+   "kb-0061"
+  ],
+  "source": "kb-0061"
+ },
+ {
+  "query": "bring confluence pages into quillstack workspace",
+  "gold_doc_ids": [
+   "kb-0062"
+  ],
+  "source": "kb-0062"
+ },
+ {
+  "query": "can I run multiple imports at the same time",
+  "gold_doc_ids": [
+   "kb-0062"
+  ],
+  "source": "kb-0062"
+ },
+ {
+  "query": "upload markdown files to quillstack",
+  "gold_doc_ids": [
+   "kb-0063"
+  ],
+  "source": "kb-0063"
+ },
+ {
+  "query": "import archive too large 2gb",
+  "gold_doc_ids": [
+   "kb-0063"
+  ],
+  "source": "kb-0063"
+ },
+ {
+  "query": "download all my workspace data and pages",
+  "gold_doc_ids": [
+   "kb-0064"
+  ],
+  "source": "kb-0064"
+ },
+ {
+  "query": "export download link expired how to get new one",
+  "gold_doc_ids": [
+   "kb-0064"
+  ],
+  "source": "kb-0064"
+ },
+ {
+  "query": "export hasn't finished after a day",
+  "gold_doc_ids": [
+   "kb-0065"
+  ],
+  "source": "kb-0065"
+ },
+ {
+  "query": "QS-1077",
+  "gold_doc_ids": [
+   "kb-0065"
+  ],
+  "source": "kb-0065"
+ },
+ {
+  "query": "turn off daily email summary from quillstack",
+  "gold_doc_ids": [
+   "kb-0066",
+   "kb-0067"
+  ],
+  "source": "kb-0066"
+ },
+ {
+  "query": "Settings > Notifications > Digest",
+  "gold_doc_ids": [
+   "kb-0066",
+   "kb-0067"
+  ],
+  "source": "kb-0066"
+ },
+ {
+  "query": "what time does the daily digest email send",
+  "gold_doc_ids": [
+   "kb-0066",
+   "kb-0067"
+  ],
+  "source": "kb-0067"
+ },
+ {
+  "query": "digest email timezone 09:00",
+  "gold_doc_ids": [
+   "kb-0066",
+   "kb-0067"
+  ],
+  "source": "kb-0067"
+ },
+ {
+  "query": "can I use quillstack on my iphone or android phone",
+  "gold_doc_ids": [
+   "kb-0068",
+   "kb-0069"
+  ],
+  "source": "kb-0068"
+ },
+ {
+  "query": "iOS 16 or later android 11",
+  "gold_doc_ids": [
+   "kb-0068",
+   "kb-0069"
+  ],
+  "source": "kb-0068"
+ },
+ {
+  "query": "mobile app keeps logging me out every few weeks",
+  "gold_doc_ids": [
+   "kb-0069"
+  ],
+  "source": "kb-0069"
+ },
+ {
+  "query": "what happens when two people edit offline conflict",
+  "gold_doc_ids": [
+   "kb-0068",
+   "kb-0069"
+  ],
+  "source": "kb-0069"
+ },
+ {
+  "query": "accidentally deleted a page how do I get it back",
+  "gold_doc_ids": [
+   "kb-0070"
+  ],
+  "source": "kb-0070"
+ },
+ {
+  "query": "how long does trash keep deleted pages 30 days",
+  "gold_doc_ids": [
+   "kb-0070"
+  ],
+  "source": "kb-0070"
+ },
+ {
+  "query": "download audit log as spreadsheet for compliance",
+  "gold_doc_ids": [
+   "kb-0071"
+  ],
+  "source": "kb-0071"
+ },
+ {
+  "query": "Settings > Security > Audit log",
+  "gold_doc_ids": [
+   "kb-0071"
+  ],
+  "source": "kb-0071"
+ },
+ {
+  "query": "found a bug that could be a security problem who do I tell",
+  "gold_doc_ids": [
+   "kb-0072"
+  ],
+  "source": "kb-0072"
+ },
+ {
+  "query": "security@quillstack.com bug bounty",
+  "gold_doc_ids": [
+   "kb-0072"
+  ],
+  "source": "kb-0072"
+ },
+ {
+  "query": "can quillstack employees read my private workspace pages",
+  "gold_doc_ids": [
+   "kb-0073"
+  ],
+  "source": "kb-0073"
+ },
+ {
+  "query": "support asked me for my password is that normal",
+  "gold_doc_ids": [
+   "kb-0073"
+  ],
+  "source": "kb-0073"
+ },
+ {
+  "query": "how long until I get a reply from support team",
+  "gold_doc_ids": [
+   "kb-0074"
+  ],
+  "source": "kb-0074"
+ },
+ {
+  "query": "business plan support response time 4 hours",
+  "gold_doc_ids": [
+   "kb-0074"
+  ],
+  "source": "kb-0074"
+ },
+ {
+  "query": "webhook stopped working and says it's disabled",
+  "gold_doc_ids": [
+   "kb-0075"
+  ],
+  "source": "kb-0075"
+ },
+ {
+  "query": "QS-1061",
+  "gold_doc_ids": [
+   "kb-0075"
+  ],
+  "source": "kb-0075"
+ }
+]

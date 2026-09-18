@@ -1,0 +1,21 @@
+# Pinned to the versions the reference build was verified with (Python 3.12).
+openai==3.15.0
+langchain-core==1.6.3
+langchain-openai==1.6.2
+langgraph==1.2.11
+langgraph-checkpoint-sqlite==3.1.1
+langchain-mcp-adapters==0.3.2
+mcp==1.30.0
+langsmith==0.12.6
+sentence-transformers==6.0.1
+transformers==5.17.0
+torch==2.14.0
+opensearch-py==3.2.0
+pydantic==2.13.5
+fastapi==0.141.1
+uvicorn==0.53.0
+httpx==0.28.1
+python-dotenv==1.2.3
+pyyaml==6.0.3
+pytest==9.1.1
+ruff==0.16.8

@@ -1,0 +1,76 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+env:
+  PYTHONPATH: src
+  LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+  LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+  LLM_MODEL: ${{ vars.LLM_MODEL || 'anthropic/claude-haiku-4.5' }}
+  LLM_MODEL_REVIEW: ${{ vars.LLM_MODEL_REVIEW || 'anthropic/claude-sonnet-4.5' }}
+  HELPDESK_URL: http://localhost:8100
+  OPENSEARCH_URL: http://localhost:9200
+  RESOLVE_INJECTION_CLASSIFIER: "0"   # heuristics only in CI: no 700 MB model download per run
+
+jobs:
+  test:
+    name: lint and unit tests (with the replay test against a helpdesk)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+      - run: ruff check src tests evals security
+      - name: start the helpdesk
+        run: |
+          nohup uvicorn helpdesk.app:app --port 8100 > helpdesk.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf localhost:8100/health && break; sleep 1; done
+      - name: unit tests, tool tests, and the replay test
+        run: pytest -q tests
+
+  eval:
+    name: injection suite and small eval with floors
+    runs-on: ubuntu-latest
+    needs: test
+    services:
+      opensearch:
+        image: opensearchproject/opensearch:2.19.0
+        env:
+          discovery.type: single-node
+          DISABLE_SECURITY_PLUGIN: "true"
+          DISABLE_INSTALL_DEMO_CONFIG: "true"
+          OPENSEARCH_JAVA_OPTS: -Xms1g -Xmx1g
+        ports:
+          - 9200:9200
+        options: >-
+          --health-cmd "curl -sf http://localhost:9200/_cluster/health || exit 1"
+          --health-interval 10s --health-timeout 5s --health-retries 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+      - name: start the helpdesk
+        run: |
+          nohup uvicorn helpdesk.app:app --port 8100 > helpdesk.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf localhost:8100/health && break; sleep 1; done
+      - name: index the knowledge base
+        run: python -m resolve.kb.index
+      - name: injection suite, guards on
+        run: python security/run_suite.py --guards on --out security/results/guards_on.json
+      - name: small held-out eval with floors
+        run: python evals/judge_eval.py --set heldout --subset evals/ci_subset.txt --check-floors
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: |
+            security/results/guards_on.json
+            evals/results/judge_heldout.json

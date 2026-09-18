@@ -1,0 +1,40 @@
+{"query": "configure saml single sign on with our identity provider", "gold_doc_ids": ["kb-0024", "kb-0025"]}
+{"query": "free plan how many users and workspaces allowed", "gold_doc_ids": ["kb-0001"]}
+{"query": "I was charged the same amount two times today", "gold_doc_ids": ["kb-0034"]}
+{"query": "how to set up a new workspace", "gold_doc_ids": ["kb-0002"]}
+{"query": "how do I add my vat number to invoices", "gold_doc_ids": ["kb-0039"]}
+{"query": "project hit the 5000 task limit", "gold_doc_ids": ["kb-0014"]}
+{"query": "require 2fa setting in security options", "gold_doc_ids": ["kb-0022"]}
+{"query": "how do I get my money back from quillstack", "gold_doc_ids": ["kb-0035"]}
+{"query": "downgrade takes effect immediately or next cycle", "gold_doc_ids": ["kb-0033"]}
+{"query": "how many results can I get from a list api call", "gold_doc_ids": ["kb-0048"]}
+{"query": "how to create reusable templates for pages", "gold_doc_ids": ["kb-0011"]}
+{"query": "switch between board list and timeline views", "gold_doc_ids": ["kb-0014"]}
+{"query": "next_cursor is null what does that mean", "gold_doc_ids": ["kb-0048"]}
+{"query": "force all team members to use two factor auth", "gold_doc_ids": ["kb-0022"]}
+{"query": "iOS 16 or later android 11", "gold_doc_ids": ["kb-0068", "kb-0069"]}
+{"query": "how do I transfer ownership of my workspace to another person", "gold_doc_ids": ["kb-0017"]}
+{"query": "PROJECTKEY-NUMBER in PR title or branch", "gold_doc_ids": ["kb-0059", "kb-0060"]}
+{"query": "set up oidc single sign on for business plan", "gold_doc_ids": ["kb-0024", "kb-0025"]}
+{"query": "what do the line items on my invoice mean", "gold_doc_ids": ["kb-0029", "kb-0030"]}
+{"query": "make someone else the owner of the workspace", "gold_doc_ids": ["kb-0017"]}
+{"query": "send page updates to a slack channel automatically", "gold_doc_ids": ["kb-0057"]}
+{"query": "duplicate payment on my credit card statement", "gold_doc_ids": ["kb-0034"]}
+{"query": "sso.entity_id and acs url for saml setup", "gold_doc_ids": ["kb-0024", "kb-0025"]}
+{"query": "how do I create a new api key for my workspace", "gold_doc_ids": ["kb-0044", "kb-0045"]}
+{"query": "automatically show pull request on the task page", "gold_doc_ids": ["kb-0059"]}
+{"query": "how do I switch from team to business plan", "gold_doc_ids": ["kb-0033", "kb-0004"]}
+{"query": "how do I sign up and start using quillstack", "gold_doc_ids": ["kb-0001"]}
+{"query": "difference between saml and oidc sso options", "gold_doc_ids": ["kb-0024", "kb-0025"]}
+{"query": "stop notifications going to the wrong slack channel", "gold_doc_ids": ["kb-0058"]}
+{"query": "refund deadline after being charged", "gold_doc_ids": ["kb-0035"]}
+{"query": "how do I authenticate api requests to quillstack", "gold_doc_ids": ["kb-0043"]}
+{"query": "QS-1099 request_id", "gold_doc_ids": ["kb-0055", "kb-0052"]}
+{"query": "slack.default_channel configuration", "gold_doc_ids": ["kb-0057", "kb-0058"]}
+{"query": "inv-202608-00417 invoice number format explanation", "gold_doc_ids": ["kb-0029", "kb-0030"]}
+{"query": "page.created task.completed event types", "gold_doc_ids": ["kb-0058"]}
+{"query": "how many api keys can I have on team plan", "gold_doc_ids": ["kb-0044", "kb-0045"]}
+{"query": "tax id not showing on old invoice", "gold_doc_ids": ["kb-0039"]}
+{"query": "api returned internal server error should I retry", "gold_doc_ids": ["kb-0055"]}
+{"query": "can I use quillstack on my iphone or android phone", "gold_doc_ids": ["kb-0068", "kb-0069"]}
+{"query": "QS-1007 invalid field in api call", "gold_doc_ids": ["kb-0043"]}
