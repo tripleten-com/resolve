@@ -1,7 +1,0 @@
-[mcp_server] helpdesk tools over stdio, target http://localhost:8110
-[09/18/26 00:25:04] INFO     Processing request of type           server.py:733
-                             ListToolsRequest                                  
-C:\Users\amish\Documents\TripleTenCourses\resolve\.venv\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:   4%|4         | 9/202 [00:00<00:02, 85.42it/s]Loading weights:  13%|#2        | 26/202 [00:00<00:01, 130.74it/s]Loading weights:  21%|##1       | 43/202 [00:00<00:01, 147.82it/s]Loading weights:  37%|###6      | 74/202 [00:00<00:00, 210.22it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 475.55it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.

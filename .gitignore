@@ -9,3 +9,4 @@ helpdesk/audit.log
 .pytest_cache/
 var/
 *.egg-info/
+scratch/

@@ -1,20 +1,0 @@
-[mcp_server] helpdesk tools over stdio, target http://localhost:8110
-[09/18/26 00:22:42] INFO     Processing request of type           server.py:733
-                             ListToolsRequest                                  
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-C:\Users\amish\Documents\TripleTenCourses\resolve\.venv\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:  14%|#4        | 29/202 [00:00<00:00, 289.72it/s]Loading weights:  34%|###4      | 69/202 [00:00<00:00, 345.23it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 810.72it/s]
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2547.50it/s]
-[09/18/26 00:22:59] INFO     Processing request of type           server.py:733
-                             CallToolRequest                                   
-[09/18/26 00:23:00] INFO     HTTP Request: GET                  _client.py:1025
-                             http://localhost:8110/issues?q=2FA                
-                             +code+rejected+not+working                        
-                             "HTTP/1.1 200 OK"                                 
-[09/18/26 00:23:03] INFO     Processing request of type           server.py:733
-                             CallToolRequest                                   
-                    INFO     HTTP Request: GET                  _client.py:1025
-                             http://localhost:8110/issues?q=TOT                
-                             P+authenticator+code+rejected                     
-                             "HTTP/1.1 200 OK"                                 
