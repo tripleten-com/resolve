@@ -6,7 +6,7 @@ The system under the microscope is Resolve as you have built it. `input_guard` s
 
 Assets. What's worth stealing or breaking? Customer PII in ticket text and in the account records `get_account` returns (plan, invoices, the last five charges), the knowledge base including its internal pages (the refund approval policy, the admin tools runbook), write access to the helpdesk through `create_issue`, `add_ticket_comment`, and `set_ticket_status`, the system prompts, and your token budget. That last one is a real asset even though it feels like an expense line.
 
-Entry points. Where does untrusted data enter? The ticket is the obvious one: subject and body, typed by anyone with the web form or an email address. Retrieved chunks are the second, and they come from both public and internal docs. Tool results are the third and the one that gets forgotten: the comments that ride along with `get_ticket`, the issue bodies `search_issues` returns, and the account record from `get_account`.
+Entry points. Where does untrusted data enter? The ticket is the obvious one: subject and body, typed by anyone with the web form or an email address. Retrieved chunks are the second, and they come from both public and internal docs. Tool results are the third and the one that gets forgotten: the issue bodies `search_issues` returns and the account record from `get_account`. Ticket comments would join the list through `get_ticket`, but no specialist in Resolve holds that tool, so they stay outside the boundary until someone scopes it in.
 
 Trust boundaries. Where does untrusted data meet code you wrote or a model you prompted? Every crossing is a place where validation either happens or doesn't.
 
@@ -93,7 +93,7 @@ Walk the graph node by node and write down what each one reads. The last column 
 </tr>
 </table>
 
-Five nodes read something an outsider can influence. A customer writes the ticket. A malicious insider, or a scraped page that someone pasted into an article, writes the knowledge-base chunk. An attacker who can comment on a ticket, or whose earlier bug report became an issue body, writes the tool result the agent reads back. All of it arrives at the model as the same thing: context. All of it can carry sentences shaped like instructions.
+Five nodes read something an outsider can influence. A customer writes the ticket. A malicious insider, or a scraped page that someone pasted into an article, writes the knowledge-base chunk. An attacker whose earlier bug report became an issue body writes the tool result the agent reads back. All of it arrives at the model as the same thing: context. All of it can carry sentences shaped like instructions.
 
 Defending only the front door is the classic mistake here. `input_guard` on the ticket text feels like the whole job because the ticket is the only channel a human typed into. Your retrieval step (**Retrieval and RAG**) and your MCP tool results (**MCP: Tools for Agents**) are live entry points with exactly the same standing, and they arrive after `input_guard` has already passed the ticket.
 

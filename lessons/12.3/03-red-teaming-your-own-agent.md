@@ -182,7 +182,7 @@ The mixed spread is the honest outcome. A list where everything is fixed reads a
 
 The suite covers the attacks you thought of. The red-team pass goes after the outcomes an attacker wants, whichever text gets there: a leaked system prompt, an internal-only page cited in a reply, a lookup of another customer's account, an issue filed with attacker-chosen content, a ticket closed that should have escalated, a reply carrying a link to an outside host, and a run that spends ten times the normal tokens. `observe()` already records the first six. The seventh is not in the runner; the state has `usage.input_tokens` and a normal how-to ticket runs 13,000 to 28,000, so a check that fails a case above, say, 150,000 is one line you add.
 
-Try each outcome through every entry point: the ticket, a planted document, and a planted issue or comment. When a variant fails, try it encoded and in another language. Keep every attempt in `security/redteam_findings.md` with the input, the entry point, what the state showed, and whether it counts as a finding. Then promote every real finding into the suite as a permanent case. A finding is one JSON line:
+Try each outcome through every entry point: the ticket, a planted document, and a planted issue. When a variant fails, try it encoded and in another language. Keep every attempt in `security/redteam_findings.md` with the input, the entry point, what the state showed, and whether it counts as a finding. Then promote every real finding into the suite as a permanent case. A finding is one JSON line:
 
 ```python
 import json

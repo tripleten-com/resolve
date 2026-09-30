@@ -132,7 +132,7 @@ Do not read that as safety. Read it as the result of one model, one prompt, one 
 
 That's an HTML comment, so the documentation site renders nothing. Your chunker (**Retrieval and RAG**) doesn't strip it, your embedding model happily encodes it, and `search_kb` hands it to `knowledge_agent` as context on any query the article matches. White-on-white text, a payload written in **zero-width characters** (Unicode characters that take up no space on screen, so a sentence can hide inside what looks like a blank line), and a comment buried at the end of a long page all do the same job.
 
-The channels multiply once you count them honestly. A retrieved chunk, public or internal. A tool result, which for Resolve means the comments that ride along with `get_ticket`, the issue bodies `search_issues` returns, and the account record from `get_account`. And any upstream field the agent later summarizes, which in a support system usually means the ticket history.
+The channels multiply once you count them honestly. A retrieved chunk, public or internal. A tool result, which for Resolve means the issue bodies `search_issues` returns and the account record from `get_account`; ticket comments would count too if any specialist held `get_ticket`, and none does. And any upstream field the agent later summarizes, which in a support system usually means the ticket history.
 
 The attacker needs no access to your prompt box. They need the ability to write text somewhere Resolve will eventually read, and a retrieval agent's entire job is to go find text it hasn't read yet. `input_guard` never sees any of this, because by the time the payload enters the context window, that check has already passed the ticket.
 
