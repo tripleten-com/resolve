@@ -14,7 +14,7 @@ Copy `.env.example` to `.env` and fill in the key. The model lines are the part 
 LLM_BASE_URL=https://api.tokenfactory.nebius.com/v1/
 LLM_API_KEY=
 LLM_MODEL=Qwen/Qwen3-235B-A22B-Instruct-2507
-LLM_MODEL_REVIEW=openai/gpt-oss-120b
+LLM_MODEL_REVIEW=google/gemma-3-27b-it
 ```
 
 `LLM_BASE_URL` is the endpoint the client posts to. `LLM_API_KEY` is your key for that endpoint. `LLM_MODEL` is the model every ordinary call uses, and `LLM_MODEL_REVIEW` is a second, usually stronger, model that the reviewer and the judge use in later chapters. It may equal `LLM_MODEL`. The defaults point at Nebius Token Factory with the two open models the course uses; `.env.example` shows the equivalent lines for OpenRouter, OpenAI, Anthropic and Ollama. The outputs printed in this chapter were recorded while the course was written, against a Claude model through OpenRouter. The model name and endpoint in your own output will differ, and the exact wording of a reply may too; the shape of every reply is the same. `.env` holds a secret, so it never goes into git.

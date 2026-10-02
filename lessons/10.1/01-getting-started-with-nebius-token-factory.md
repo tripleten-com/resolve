@@ -21,7 +21,7 @@ Paste it into your project's `.env` along with the endpoint and the two models t
 LLM_BASE_URL=https://api.tokenfactory.nebius.com/v1/
 LLM_API_KEY=your-key-here
 LLM_MODEL=Qwen/Qwen3-235B-A22B-Instruct-2507
-LLM_MODEL_REVIEW=openai/gpt-oss-120b
+LLM_MODEL_REVIEW=google/gemma-3-27b-it
 ```
 `LLM_MODEL` does the everyday work: classifying tickets, the specialist agents' loops, the prompts in this chapter. `LLM_MODEL_REVIEW` is the second model that reviews drafts and, later, judges them. It is from a different model family on purpose, because a judge tends to favour prose from its own family, which **LLM-as-Judge & Hallucination Metrics** explains. Both have to support two things Resolve depends on: tool calling, where the model asks your code to run a function, and JSON output that follows a schema. Not every open model does both well, so the project ships a check for exactly that (below).
 ## Keeping your key private

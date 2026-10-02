@@ -119,3 +119,15 @@ Resume semantics that matter for the page: `interrupt()` re-executes the node fr
 - Task 5, Step 2 (`evals/calibration.jsonl`): the student's hand labels; not produced here.
 - Task 5, Step 4 (CI red then green, run links): cannot be run here; `ci.yml` is written for the shape the page describes (unit job with a helpdesk started in the job, eval job with an OpenSearch service container, indexing, the suite, ten held-out tickets, floors from `configs/judge.yaml`). `ruff` is not in the SPEC's package list; it is pinned in `requirements.txt` because the workflow runs it.
 - `requirements.txt` was absent from the repository although SPEC section 6 says it ships pinned; it was generated from the verified venv.
+
+
+## Nebius Token Factory verification (2026-10-02)
+
+The course route moved to Nebius Token Factory (`https://api.tokenfactory.nebius.com/v1/`). Verified on a key from the `ai-ml-tripleten` project:
+
+- `scripts/check_provider.py` on `Qwen/Qwen3-235B-A22B-Instruct-2507`: 5/5 (chat, tool auto, tool forced, json_schema, review). `Qwen/Qwen3-30B-A3B-Instruct-2507`: 4/4. `google/gemma-3-27b-it`: forced tool call and json_schema pass, tool auto fails (it answers instead of calling), which does not matter for the reviewer and judge roles. `openai/gpt-oss-120b`: forced tool_choice ignored (breaks review). `zai-org/GLM-5.3`, `GLM-5.3-Flash`, `moonshotai/Kimi-K3`, `Qwen/Qwen3.5-397B-A17B`: reasoning models that return empty content for structured output at small max_tokens; GLM-5.3 as reviewer produced "reviewer output malformed" on both test tickets. Out.
+- Graph with Qwen3-235B for both roles, dry-run writes: T-10001 auto_resolve (kb-0015, confidence 1.0, $0.0064, 41 s), T-10012 auto_resolve (kb-0005, 0.95, $0.0069, 16 s), T-10004 bug escalate after create_issue proposed twice (reviewer objected to the ISS-DRYRUN placeholder, a dry-run artefact), T-10018 billing escalate by the refund rule ($0.027), T-10007 quarantined at input_guard ($0). Same decisions as the Claude run at roughly a third of the cost.
+- Graph with Qwen3-235B drafting and `google/gemma-3-27b-it` reviewing: T-10001 approve first pass, auto_resolve ($0.0062); T-10004 sensible revise reasons, escalate.
+- `evals/judge_eval.py --set dev --ids T-10001,T-10012,T-10038,T-10004` with gemma as judge: routing 3/4 (T-10038 again), retrieval hit 1.0, action safety 1.0, judge means correctness 4.0 / groundedness 4.5 / completeness 5.0 / action_safety 4.5, claim groundedness 0.94, hallucination 1/4, cost per ticket mean $0.020 median $0.019 p95 $0.035, latency median 19 s p95 37 s, judge cost about $0.005 per ticket. Results in `evals/results/judge_dev_nebius.json`.
+- `pytest -q tests` against Nebius: 28 passed in 40 s (replay test included).
+- Default pair in `.env.example`: `Qwen/Qwen3-235B-A22B-Instruct-2507` + `google/gemma-3-27b-it`.

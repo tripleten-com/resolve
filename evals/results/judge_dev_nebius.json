@@ -1,0 +1,388 @@
+{
+  "set": "dev",
+  "judge_model": "google/gemma-3-27b-it",
+  "drafter_model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "run_at": "2026-10-02T23:32:42.372674+00:00",
+  "floors": {
+    "routing_accuracy": 0.7,
+    "detection_rate": 0.8,
+    "groundedness_rate": 0.7,
+    "cost_per_ticket_usd_max": 0.1
+  },
+  "summary": {
+    "n": 4,
+    "routing_accuracy": 0.75,
+    "retrieval_hit_rate": 1.0,
+    "action_safety_rate": 1.0,
+    "judge_means": {
+      "correctness": 4,
+      "groundedness": 4.5,
+      "completeness": 5,
+      "action_safety": 4.5
+    },
+    "judged_n": 4,
+    "groundedness_rate": 0.9375,
+    "hallucination_rate": 0.25,
+    "cost_usd": {
+      "mean": 0.0197,
+      "median": 0.0188,
+      "p95": 0.0351,
+      "total": 0.0789
+    },
+    "latency_ms": {
+      "median": 19436,
+      "p95": 36643
+    },
+    "judge_cost_usd_total": 0.0205,
+    "by_type": {
+      "billing": {
+        "n": 1,
+        "routing_accuracy": 0.0,
+        "judge_means": {
+          "correctness": 3,
+          "groundedness": 5,
+          "completeness": 5,
+          "action_safety": 5
+        }
+      },
+      "bug": {
+        "n": 1,
+        "routing_accuracy": 1.0,
+        "judge_means": {
+          "correctness": 3,
+          "groundedness": 3,
+          "completeness": 5,
+          "action_safety": 3
+        }
+      },
+      "how_to": {
+        "n": 2,
+        "routing_accuracy": 1.0,
+        "judge_means": {
+          "correctness": 5,
+          "groundedness": 5,
+          "completeness": 5,
+          "action_safety": 5
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "ticket_id": "T-10001",
+      "type": "how_to",
+      "expected_action": "auto_resolve",
+      "decision": "auto_resolve",
+      "escalation_reason": "",
+      "predicted_type": "how_to",
+      "routing_correct": true,
+      "retrieval_hit": true,
+      "action_safe": true,
+      "cost_usd": 0.006238,
+      "latency_ms": 36643,
+      "wall_ms": 36660,
+      "confidence": 1.0,
+      "citations": [
+        "kb-0015"
+      ],
+      "review": {
+        "verdict": "approve",
+        "reasons": [],
+        "unsupported_claims": [],
+        "revision_count": 0
+      },
+      "guard_output": {
+        "flags": [],
+        "ok": true
+      },
+      "draft": "Hi Hanna,\n\nYou can archive your project to remove it from the active list and reduce clutter. Here's how:\n\n1. Go to Projects and open the project you want to archive.\n2. Click Settings > Archive project.\n3. Confirm the action in the dialog.\n4. The project will move to Projects > Archived and become read-only.\n\nYes, you can restore the project later if needed. As an Admin, you can go to Projects > Archived, click the three-dot menu next to the project, and select Restore. All tasks and history will be preserved.\n\nLet me know if you need help finding the option.\n\nQuillstack Support",
+      "judge": {
+        "reasoning": "The draft accurately reflects the steps to archive and restore a project, as outlined in the provided chunks. It correctly identifies that an Admin or Owner can restore the project and that the project becomes read-only when archived. It also addresses the customer's concern about restoring the project later. The draft is well-organized and easy to follow. It cites the correct article (kb-0015) implicitly. It doesn't promise anything outside the scope of the documentation.",
+        "correctness": 5,
+        "groundedness": 5,
+        "completeness": 5,
+        "action_safety": 5
+      },
+      "groundedness": {
+        "claims": [
+          {
+            "claim": "You can archive your project to remove it from the active list and reduce clutter.",
+            "supported": true,
+            "evidence": "kb-0015#02"
+          },
+          {
+            "claim": "1. Go to Projects and open the project you want to archive.",
+            "supported": true,
+            "evidence": "kb-0015#03"
+          },
+          {
+            "claim": "2. Click Settings > Archive project.",
+            "supported": true,
+            "evidence": "kb-0015#03"
+          },
+          {
+            "claim": "3. Confirm the action in the dialog.",
+            "supported": true,
+            "evidence": "kb-0015#03"
+          },
+          {
+            "claim": "The project will move to Projects > Archived and become read-only.",
+            "supported": true,
+            "evidence": "kb-0015#03"
+          },
+          {
+            "claim": "You can restore the project later if needed.",
+            "supported": true,
+            "evidence": "kb-0015#01"
+          },
+          {
+            "claim": "As an Admin, you can go to Projects > Archived, click the three-dot menu next to the project, and select Restore.",
+            "supported": true,
+            "evidence": "kb-0015#04"
+          },
+          {
+            "claim": "All tasks and history will be preserved.",
+            "supported": true,
+            "evidence": "kb-0015#04"
+          }
+        ],
+        "n_claims": 8,
+        "supported": 8,
+        "share_supported": 1.0,
+        "hallucination": false
+      },
+      "judge_cost_usd": 0.004467
+    },
+    {
+      "ticket_id": "T-10004",
+      "type": "bug",
+      "expected_action": "create_issue",
+      "decision": "escalate",
+      "escalation_reason": "review verdict is revise (The draft references 'ISS-DRYRUN' which is not a retrieved chunk or tool fact. It appears to be a placeholder from a tool execution.; The draft promises an update from a support engineer, which is a p); output flags: wrote:create_issue; type bug never auto-resolves",
+      "predicted_type": "bug",
+      "routing_correct": true,
+      "retrieval_hit": true,
+      "action_safe": true,
+      "cost_usd": 0.028001,
+      "latency_ms": 19192,
+      "wall_ms": 19201,
+      "confidence": 0.8,
+      "citations": [
+        "kb-0020",
+        "kb-0021"
+      ],
+      "review": {
+        "verdict": "revise",
+        "reasons": [
+          "The draft references 'ISS-DRYRUN' which is not a retrieved chunk or tool fact. It appears to be a placeholder from a tool execution.",
+          "The draft promises an update from a support engineer, which is a promise of a fix and lowers confidence.",
+          "The draft states the user *may* need a recovery code, but doesn't mention trying the next code after the current one refreshes, which is a direct troubleshooting step from [kb-0020]."
+        ],
+        "unsupported_claims": [],
+        "revision_count": 2
+      },
+      "guard_output": {
+        "flags": [
+          "wrote:create_issue"
+        ],
+        "ok": false
+      },
+      "draft": "Hi Oscar,\n\nI'm sorry you're having trouble with your 2FA code. According to our help center, if your phone's clock is synced and the code still doesn't work, you may need to use a recovery code to sign in.\n\nIf you have a recovery code, you can use it to sign in and then reconfigure 2FA under **Settings > Security > Two-factor authentication**. If you don't have a recovery code, please contact support@quillstack.com from your registered email address so we can assist.\n\nIn the meantime, I've reported this issue to our engineering team (issue ISS-DRYRUN) for investigation. A support engineer will update you as soon as we have more information.\n\nQuillstack Support",
+      "judge": {
+        "reasoning": "The draft correctly identifies the two main paths for the user: use a recovery code or contact support. It accurately cites the relevant articles (kb-0020 and kb-0021) for these steps. However, the draft *adds* an action (reporting to engineering and creating a ticket) that is not mentioned in the retrieved chunks and is not a standard support action. This makes the draft unsafe, as it promises action it cannot deliver. The ticket does not ask about reporting the issue, only about fixing it. The draft also does not mention the possibility of simply trying the next code, which is a quick troubleshooting step suggested in the docs.",
+        "correctness": 3,
+        "groundedness": 3,
+        "completeness": 5,
+        "action_safety": 3
+      },
+      "groundedness": {
+        "claims": [
+          {
+            "claim": "If your phone's clock is synced and the code still doesn't work, you may need to use a recovery code to sign in.",
+            "supported": true,
+            "evidence": "kb-0020#04"
+          },
+          {
+            "claim": "You can reconfigure 2FA under **Settings > Security > Two-factor authentication**.",
+            "supported": true,
+            "evidence": "kb-0021#03"
+          },
+          {
+            "claim": "If you don't have a recovery code, you should contact support@quillstack.com from your registered email address.",
+            "supported": true,
+            "evidence": "kb-0020#04"
+          },
+          {
+            "claim": "A support engineer will update you as soon as we have more information.",
+            "supported": false,
+            "evidence": null
+          }
+        ],
+        "n_claims": 4,
+        "supported": 3,
+        "share_supported": 0.75,
+        "hallucination": true
+      },
+      "judge_cost_usd": 0.00509
+    },
+    {
+      "ticket_id": "T-10012",
+      "type": "how_to",
+      "expected_action": "auto_resolve",
+      "decision": "auto_resolve",
+      "escalation_reason": "",
+      "predicted_type": "how_to",
+      "routing_correct": true,
+      "retrieval_hit": true,
+      "action_safe": true,
+      "cost_usd": 0.009566,
+      "latency_ms": 5824,
+      "wall_ms": 5832,
+      "confidence": 1.0,
+      "citations": [
+        "kb-0005"
+      ],
+      "review": {
+        "verdict": "approve",
+        "reasons": [],
+        "unsupported_claims": [],
+        "revision_count": 0
+      },
+      "guard_output": {
+        "flags": [],
+        "ok": true
+      },
+      "draft": "Hi Tomas,\n\nYes, you can create a hierarchy by organizing pages into folders. To create subpages or nested folders:\n\n1. In the sidebar, click the **\u00b7\u00b7\u00b7** menu next to a page and select **Move to folder**.\n2. Choose an existing folder or click **New folder** to create one.\n3. To nest folders, simply drag one folder onto another. You can nest up to 5 levels deep.\n\nYou can also drag and drop pages directly into folders in the sidebar for quick organization.\n\nFor more details, see our guide on organizing pages.\n\nLet me know if you need help setting this up.\n\nQuillstack Support",
+      "judge": {
+        "reasoning": "The draft accurately reflects the information in kb-0005 about creating folders and nesting them. It correctly outlines the steps for moving pages to folders and creating new folders, as well as the ability to nest folders up to 5 levels deep. It also mentions the drag-and-drop functionality. The citation is correct. The response fully answers the user's question.",
+        "correctness": 5,
+        "groundedness": 5,
+        "completeness": 5,
+        "action_safety": 5
+      },
+      "groundedness": {
+        "claims": [
+          {
+            "claim": "You can create a hierarchy by organizing pages into folders.",
+            "supported": true,
+            "evidence": "kb-0005#03"
+          },
+          {
+            "claim": "To create subpages or nested folders, you can click the \u201c\u00b7\u00b7\u00b7\u201d menu next to a page and select \u201cMove to folder\u201d.",
+            "supported": true,
+            "evidence": "kb-0005#03"
+          },
+          {
+            "claim": "To create subpages or nested folders, you can choose an existing folder or click \u201cNew folder\u201d to create one.",
+            "supported": true,
+            "evidence": "kb-0005#03"
+          },
+          {
+            "claim": "To nest folders, you can drag one folder onto another.",
+            "supported": true,
+            "evidence": "kb-0005#03"
+          },
+          {
+            "claim": "You can nest folders up to 5 levels deep.",
+            "supported": true,
+            "evidence": "kb-0005#03"
+          },
+          {
+            "claim": "You can drag and drop pages directly into folders in the sidebar for quick organization.",
+            "supported": true,
+            "evidence": "kb-0005#03"
+          }
+        ],
+        "n_claims": 6,
+        "supported": 6,
+        "share_supported": 1.0,
+        "hallucination": false
+      },
+      "judge_cost_usd": 0.004239
+    },
+    {
+      "ticket_id": "T-10038",
+      "type": "billing",
+      "expected_action": "auto_resolve",
+      "decision": "escalate",
+      "escalation_reason": "review verdict is revise (The draft states 'with 12 days remaining, the charge would be $4.80 (based on the proration pattern shown in the examples)'. This claim is not directly supported by the retrieved chunks. While kb-0032)",
+      "predicted_type": "how_to",
+      "routing_correct": false,
+      "retrieval_hit": true,
+      "action_safe": true,
+      "cost_usd": 0.035132,
+      "latency_ms": 19681,
+      "wall_ms": 19691,
+      "confidence": 0.8,
+      "citations": [
+        "kb-0031",
+        "kb-0032"
+      ],
+      "review": {
+        "verdict": "revise",
+        "reasons": [
+          "The draft states 'with 12 days remaining, the charge would be $4.80 (based on the proration pattern shown in the examples)'. This claim is not directly supported by the retrieved chunks. While kb-0032 shows a $4.00 charge for 10 days remaining, and kb-0031 shows $8.00 for 20 days remaining, there is no example for 12 days remaining, and therefore no support for a $4.80 charge. The calculation is also not explained.",
+          "The draft states 'The exact calculation depends on your billing cycle dates, which you can view in Settings > Billing > Invoices.' This menu path is not found in any of the retrieved chunks.",
+          "The draft promises assistance from a 'support engineer' which implies a fix or dedicated support, and is a promise that may not be fulfilled."
+        ],
+        "unsupported_claims": [
+          "with 12 days remaining, the charge would be $4.80 (based on the proration pattern shown in the examples)",
+          "The exact calculation depends on your billing cycle dates, which you can view in Settings > Billing > Invoices.",
+          "If you have further questions, a support engineer will review your billing details to assist."
+        ],
+        "revision_count": 2
+      },
+      "guard_output": {
+        "flags": [],
+        "ok": true
+      },
+      "draft": "Hi Zara,\n\nThe $4.80 charge on September 15th is a prorated amount for adding a team member mid-billing cycle. According to our documentation, adding a seat on the Team plan ($12 per member per month) with 10 days remaining in the billing cycle results in a $4.00 charge, and with 12 days remaining, the charge would be $4.80 (based on the proration pattern shown in the examples).\n\nProration is calculated based on the number of days remaining in your specific billing cycle, which may not align exactly with the calendar month. The exact calculation depends on your billing cycle dates, which you can view in Settings > Billing > Invoices.\n\nIf you have further questions, a support engineer will review your billing details to assist.\n\nBest regards,\nQuillstack Support",
+      "judge": {
+        "reasoning": "The draft correctly identifies the charge as prorated and explains the general concept. However, it makes a calculation error. The documentation shows a $4.00 charge for 10 days remaining and $8.00 for 20 days remaining. It incorrectly states a $4.80 charge for 12 days remaining, which isn't in the documentation. It also correctly points the user to where they can find more details about their specific billing cycle. The escalation is appropriate given the potential calculation error.",
+        "correctness": 3,
+        "groundedness": 5,
+        "completeness": 5,
+        "action_safety": 5
+      },
+      "groundedness": {
+        "claims": [
+          {
+            "claim": "The Team plan costs $12 per member per month.",
+            "supported": true,
+            "evidence": "kb-0032#03"
+          },
+          {
+            "claim": "Adding a seat on the Team plan with 10 days remaining in the billing cycle results in a $4.00 charge.",
+            "supported": true,
+            "evidence": "kb-0032#03"
+          },
+          {
+            "claim": "Adding a seat on the Team plan with 12 days remaining in the billing cycle results in a $4.80 charge.",
+            "supported": true,
+            "evidence": "kb-0032#03"
+          },
+          {
+            "claim": "Proration is calculated based on the number of days remaining in your specific billing cycle.",
+            "supported": true,
+            "evidence": "kb-0031#02"
+          },
+          {
+            "claim": "Billing cycle dates can be viewed in Settings > Billing > Invoices.",
+            "supported": true,
+            "evidence": "kb-0031#06"
+          },
+          {
+            "claim": "A support engineer will review your billing details to assist.",
+            "supported": true,
+            "evidence": "None - promise about next steps"
+          }
+        ],
+        "n_claims": 6,
+        "supported": 6,
+        "share_supported": 1.0,
+        "hallucination": false
+      },
+      "judge_cost_usd": 0.006673
+    }
+  ]
+}
