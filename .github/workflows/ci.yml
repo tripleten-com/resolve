@@ -18,6 +18,19 @@ jobs:
   test:
     name: lint and unit tests (with the replay test against a helpdesk)
     runs-on: ubuntu-latest
+    services:
+      opensearch:
+        image: opensearchproject/opensearch:2.19.0
+        env:
+          discovery.type: single-node
+          DISABLE_SECURITY_PLUGIN: "true"
+          DISABLE_INSTALL_DEMO_CONFIG: "true"
+          OPENSEARCH_JAVA_OPTS: -Xms1g -Xmx1g
+        ports:
+          - 9200:9200
+        options: >-
+          --health-cmd "curl -sf http://localhost:9200/_cluster/health || exit 1"
+          --health-interval 10s --health-timeout 5s --health-retries 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,6 +43,8 @@ jobs:
         run: |
           nohup uvicorn helpdesk.app:app --port 8100 > helpdesk.log 2>&1 &
           for i in $(seq 1 30); do curl -sf localhost:8100/health && break; sleep 1; done
+      - name: index the knowledge base (the replay test runs the real bug agent)
+        run: python -m resolve.kb.index
       - name: unit tests, tool tests, and the replay test
         run: pytest -q tests
 
