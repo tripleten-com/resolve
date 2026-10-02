@@ -131,3 +131,7 @@ The course route moved to Nebius Token Factory (`https://api.tokenfactory.nebius
 - `evals/judge_eval.py --set dev --ids T-10001,T-10012,T-10038,T-10004` with gemma as judge: routing 3/4 (T-10038 again), retrieval hit 1.0, action safety 1.0, judge means correctness 4.0 / groundedness 4.5 / completeness 5.0 / action_safety 4.5, claim groundedness 0.94, hallucination 1/4, cost per ticket mean $0.020 median $0.019 p95 $0.035, latency median 19 s p95 37 s, judge cost about $0.005 per ticket. Results in `evals/results/judge_dev_nebius.json`.
 - `pytest -q tests` against Nebius: 28 passed in 40 s (replay test included).
 - Default pair in `.env.example`: `Qwen/Qwen3-235B-A22B-Instruct-2507` + `google/gemma-3-27b-it`.
+
+## CI on GitHub (2026-10-02)
+
+Repository: https://github.com/tripleten-com/resolve (private, branch `master`). Secrets `LLM_BASE_URL` and `LLM_API_KEY` (Nebius) and variables `LLM_MODEL` / `LLM_MODEL_REVIEW` are set on the repository. Run 37078760879 is green: `test` job 3m54s (ruff, 28 tests incl. the replay test; needed an OpenSearch service container plus `python -m resolve.kb.index`, because the replay test runs the real bug agent and `search_kb` must answer), `eval` job 9m52s (index, injection suite guards-on with heuristics only: detection 0.913, false positives 0.10, $0.35; ten-ticket held-out eval: routing 0.8, retrieval hit 1.0, groundedness 0.89, hallucination 0.33, cost mean $0.022; all floors met). Earlier runs failed for the missing key (every ticket errored) and for the missing OpenSearch in the test job.
