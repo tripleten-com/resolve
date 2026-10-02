@@ -4,20 +4,20 @@ Every lesson in this chapter calls a model, and so does most of the course after
 
 A **hosted model** is a large language model running on a provider's servers. You send it text over HTTPS, it sends text back, and the provider bills you for the traffic. The unit of billing is the **token**, which is the unit the model reads and writes in. A token is roughly three quarters of an English word, so "rotate an API key before it expires" is about eight tokens. Nothing runs on your laptop except the code that builds the request and reads the reply.
 
-Almost every provider accepts the same request shape, the chat completions format that the `openai` Python package speaks. The package name misleads: OpenRouter, OpenAI, Anthropic's compatibility endpoint, and a local Ollama server all accept the same call, so one client covers all of them. Resolve never hardcodes a provider. Three values in `.env` decide where a call goes and which model answers it, and any OpenAI-compatible provider works.
+Almost every provider accepts the same request shape, the chat completions format that the `openai` Python package speaks. The package name misleads: Nebius Token Factory, OpenRouter, OpenAI, Anthropic's compatibility endpoint, and a local Ollama server all accept the same call, so one client covers all of them. The previous lesson set up the course route, Nebius Token Factory, and put your key in `.env`. Resolve never hardcodes a provider. Three values in `.env` decide where a call goes and which model answers it, and any OpenAI-compatible provider works.
 
 ## Three values in .env
 
 Copy `.env.example` to `.env` and fill in the key. The model lines are the part that matters here.
 
 ```plain text
-LLM_BASE_URL=https://openrouter.ai/api/v1
+LLM_BASE_URL=https://api.tokenfactory.nebius.com/v1/
 LLM_API_KEY=
-LLM_MODEL=anthropic/claude-haiku-4.5
-LLM_MODEL_REVIEW=anthropic/claude-sonnet-4.5
+LLM_MODEL=Qwen/Qwen3-235B-A22B-Instruct-2507
+LLM_MODEL_REVIEW=openai/gpt-oss-120b
 ```
 
-`LLM_BASE_URL` is the endpoint the client posts to. `LLM_API_KEY` is your key for that endpoint. `LLM_MODEL` is the model every ordinary call uses, and `LLM_MODEL_REVIEW` is a second, usually stronger, model that the reviewer and the judge use in later chapters. It may equal `LLM_MODEL`. The defaults point at OpenRouter with a small Anthropic model, which is cheap enough to run the whole project on; `.env.example` shows the equivalent lines for OpenAI, Anthropic and Ollama. `.env` holds a secret, so it never goes into git.
+`LLM_BASE_URL` is the endpoint the client posts to. `LLM_API_KEY` is your key for that endpoint. `LLM_MODEL` is the model every ordinary call uses, and `LLM_MODEL_REVIEW` is a second, usually stronger, model that the reviewer and the judge use in later chapters. It may equal `LLM_MODEL`. The defaults point at Nebius Token Factory with the two open models the course uses; `.env.example` shows the equivalent lines for OpenRouter, OpenAI, Anthropic and Ollama. The outputs printed in this chapter were recorded while the course was written, against a Claude model through OpenRouter. The model name and endpoint in your own output will differ, and the exact wording of a reply may too; the shape of every reply is the same. `.env` holds a secret, so it never goes into git.
 
 Two packages do the work, pinned to the versions the project uses.
 

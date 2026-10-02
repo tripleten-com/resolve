@@ -2,13 +2,13 @@
 
 Reads three values from the environment (a .env file is loaded if present):
 
-    LLM_BASE_URL      the OpenAI-compatible endpoint, e.g. https://openrouter.ai/api/v1
+    LLM_BASE_URL      the OpenAI-compatible endpoint, e.g. https://api.tokenfactory.nebius.com/v1/
     LLM_API_KEY       your key for that endpoint
     LLM_MODEL         the model for classifying and for the specialists
     LLM_MODEL_REVIEW  the model for the reviewer and the judge (optional; defaults to LLM_MODEL)
 
-Any provider that speaks the OpenAI chat API works: OpenRouter, OpenAI, Anthropic's
-compatibility endpoint, or a local server such as Ollama.
+Any provider that speaks the OpenAI chat API works. The course route is Nebius Token Factory;
+OpenRouter, OpenAI, Anthropic's compatibility endpoint, or a local server such as Ollama work too.
 
 Run `python -m resolve.llm --check` to confirm the key and model work.
 """
@@ -23,9 +23,9 @@ from openai import OpenAI
 
 load_dotenv()
 
-BASE_URL = os.environ.get("LLM_BASE_URL", "https://openrouter.ai/api/v1")
+BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.tokenfactory.nebius.com/v1/")
 API_KEY = os.environ.get("LLM_API_KEY", "")
-MODEL = os.environ.get("LLM_MODEL", "anthropic/claude-haiku-4.5")
+MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
 MODEL_REVIEW = os.environ.get("LLM_MODEL_REVIEW", MODEL)
 
 _client: OpenAI | None = None

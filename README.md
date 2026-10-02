@@ -11,7 +11,7 @@ The guards and the decision are code. The classifier and the reviewer are one mo
 
 ## Setup
 
-You need Python 3.12, Docker with Compose, and a key for any OpenAI-compatible model endpoint.
+You need Python 3.12, Docker with Compose, and a key for any OpenAI-compatible model endpoint. The course route is Nebius Token Factory (join the TripleTen organization by invitation, create your own key); OpenRouter, OpenAI, Anthropic or a local server work the same way. After filling in `.env`, run `python scripts/check_provider.py` to confirm the endpoint supports tool calling and JSON output.
 
 ```bash
 python -m venv .venv
